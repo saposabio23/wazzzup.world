@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "Aerobik";
+  src: url("fonts/Aerobik-Regular.woff2") format("woff2"),
+    url("fonts/Aerobik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ambitregular";
+  src: url("fonts/ambit-regular-webfont.woff2") format("woff2"),
+    url("fonts/ambit-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: "ambitregular", sans-serif;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  background: hsl(0, 0%, 97%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wip{
+  float: left;
+  height: 4vmax;
+  margin-right: 10px;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3vh 4vh;
+  margin-bottom: 85vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background: hsl(0, 0%, 97%);
+  border-radius: 0 0 20px 20px;
+  z-index: 2;
+}
+
+.text {
+  font-size: 3vmax;
+  line-height: 1.4;
+  width: 70vw;
+  z-index: 4;
+  position: absolute;
+}
+
+.lastprojects{
+  position: absolute;
+  bottom: 3vh;
+  font-size: 2vmin;
+  line-height: 1.4;
+}@font-face {
+  font-family: "Aerobik";
+  src: url("Aerobik-Regular.woff2") format("woff2"),
+    url("Aerobik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ambitregular";
+  src: url("ambit-regular-webfont.woff2") format("woff2"),
+    url("ambit-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: "ambitregular", sans-serif;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  background: hsl(0, 0%, 97%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wip{
+  float: left;
+  height: 5vmax;
+  margin-right: 10px;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3vh 4vh;
+  margin-bottom: 85vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background: hsl(0, 0%, 97%);
+  border-radius: 0 0 20px 20px;
+  z-index: 3;
+}
+
+.text {
+  font-size: 4vmax;
+  line-height: 1.4;
+  width: 70vw;
+  z-index: 4;
+  position: absolute;
+}
+
+.lastprojects{
+  position: absolute;
+  bottom: 3vh;
+  font-size: 2.5vmin;
+  line-height: 1.4;
+}
+
+#show {
+  position: fixed;
+  max-height: 60vh;
+  right: 5vw;
+  bottom: 15vh;
+  z-index: 1;
+  height: 60vh;
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+#show:hover {
+  cursor: pointer;
+}
+
+
+.footer {
+  width: 100vw;
+  height: auto;
+  padding: 1.5vh 3vh;
+  font-size: 2.5vmin;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  line-height: 1.4;
+}
+
+#pm {
+  font-family: "Aerobik", serif;
+  font-size: 120%;
+}
+
+.arcoiris {
+  position: absolute;
+}
+
+.link {
+  padding-right: 10px;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.flex {
+  font-family: "Aerobik", serif;
+  border-radius: 13px;
+  padding: 0px 15px 6px 16px;
+  line-height: 7vh;
+  box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+.link:hover,
+.autreslink:hover {
+  text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+
+
+#mailcopied{
+  /*! max-width: 90vw; */
+  height: auto;
+  position: fixed;
+  left: 50vw;
+  transform: translate(-50%, 110%);
+  bottom: 0vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background: hsl(0, 0%, 97%);
+  border-radius: 10px;
+  z-index: 2;
+  transition: all .5s ease-in-out;
+  font-size: 8vw;
+  padding: 1.5vh 1.5vh 1vh 1.5vh;
+  line-height: 1;
+  display: ruby;
+}
+
+.mailappear{
+  bottom: 50vh !important;
+  transform: translate(-50%, 50%) !important;
+  transition: all .5s ease-in-out;
+}
+
+.mailexit{
+  bottom: 100vh !important;
+  transform: translate(-50%, -100%) !important;
+  transition: all .5s ease-in-out;
+}
+
+.mailreset{
+  display: none !important;
+  transform: translate(-50%, 110%);
+  bottom: 0vh;
+  transition: all .5s ease-in-out;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+.content {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  margin-bottom: calc(var(--vh, 1vh) * 85);
+}
+
+.text {
+  width: calc(90vw - 8vmin);
+}
+
+.lastprojects{
+  font-size: 2.5vmax;
+}
+
+.footer {
+  font-size: 3vmax;
+}
+
+#show {
+  width: 90vw;
+  height: auto;
+  }
+
+}
