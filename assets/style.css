@@ -47,92 +47,11 @@ a {
   color: inherit;
 }
 
-#wip{
-  float: left;
-  height: 4vmax;
-  margin-right: 10px;
-}
 
-.content {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100vh;
-  padding: 3vh 4vh;
-  margin-bottom: 85vh;
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
-  background: hsl(0, 0%, 97%);
-  border-radius: 0 0 20px 20px;
-  z-index: 2;
-}
-
-.text {
-  font-size: 3vmax;
-  line-height: 1.4;
-  width: 70vw;
-  z-index: 4;
-  position: absolute;
-}
-
-.lastprojects{
-  position: absolute;
-  bottom: 3vh;
-  font-size: 2vmin;
-  line-height: 1.4;
-}@font-face {
-  font-family: "Aerobik";
-  src: url("Aerobik-Regular.woff2") format("woff2"),
-    url("Aerobik-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ambitregular";
-  src: url("ambit-regular-webfont.woff2") format("woff2"),
-    url("ambit-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html,
-body,
-div,
-p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: "ambitregular", sans-serif;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-html {
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  background: hsl(0, 0%, 97%);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
+a:hover {
+  text-decoration: underline;
   color: inherit;
-}
-
-#wip{
-  float: left;
-  height: 5vmax;
-  margin-right: 10px;
+  cursor: pointer;
 }
 
 .content {
@@ -142,11 +61,36 @@ a {
   width: 100vw;
   min-height: 100vh;
   padding: 3vh 4vh;
-  margin-bottom: 85vh;
+  margin-bottom: 90vh;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   background: hsl(0, 0%, 97%);
   border-radius: 0 0 20px 20px;
   z-index: 3;
+}
+
+#wip {
+    float: left;
+    height: 4vmax;
+    margin-right: 20px;
+    filter: blur(2px);
+}
+
+.pmlogoturn {
+  animation: spin 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    filter: blur(2px);
+  }
+  50%{
+    filter: blur(0px);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: blur(2px);
+  }
 }
 
 .text {
@@ -157,18 +101,22 @@ a {
   position: absolute;
 }
 
-.lastprojects{
+.infos{
   position: absolute;
   bottom: 3vh;
-  font-size: 2.5vmin;
-  line-height: 1.4;
+  font-size: 2vmax;
+  line-height: 1.5;
 }
 
-#show {
-  position: fixed;
+.infos > p {
+  display: inline;
+}
+
+#tabouret {
+  position: absolute;
   max-height: 60vh;
   right: 5vw;
-  bottom: 15vh;
+  bottom: 10vh;
   z-index: 1;
   height: 60vh;
   width: auto;
@@ -176,55 +124,24 @@ a {
   border-radius: 5px;
 }
 
-#show:hover {
-  cursor: pointer;
-}
-
-
-.footer {
+.projects {
   width: 100vw;
-  height: auto;
-  padding: 1.5vh 3vh;
+  height: 100vh;
+  padding: 3vh;
   font-size: 2.5vmin;
   position: fixed;
   bottom: 0px;
-  z-index: 1;
+  z-index: 2;
   line-height: 1.4;
+  display: flex;
+  align-items: flex-end;
+  overflow-x: scroll;
 }
 
-#pm {
-  font-family: "Aerobik", serif;
-  font-size: 120%;
-}
 
-.arcoiris {
-  position: absolute;
-}
-
-.link {
-  padding-right: 10px;
-}
-
-.link:hover {
-  cursor: pointer;
-}
-
-.flex {
-  font-family: "Aerobik", serif;
-  border-radius: 13px;
-  padding: 0px 15px 6px 16px;
-  line-height: 7vh;
-  box-shadow: 3px 3px 10px hsla(0, 0%, 0%, 0.3);
-}
-
-.link:hover,
-.autreslink:hover {
-  text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
-}
-
+/* -----------------------------------
+MAIL STUFF
+-------------------------------------- */
 
 #mailcopied{
   /*! max-width: 90vw; */
@@ -236,12 +153,12 @@ a {
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   background: hsl(0, 0%, 97%);
   border-radius: 10px;
-  z-index: 2;
   transition: all .5s ease-in-out;
   font-size: 8vw;
   padding: 1.5vh 1.5vh 1vh 1.5vh;
   line-height: 1;
   display: ruby;
+  z-index:999;
 }
 
 .mailappear{
@@ -263,31 +180,73 @@ a {
   transition: all .5s ease-in-out;
 }
 
+/* -----------------------------------
+WORKS LIST
+-------------------------------------- */
 
-
-
-@media screen and (max-width: 1000px) {
-.content {
-  height: calc(var(--vh, 1vh) * 100);
-  min-height: calc(var(--vh, 1vh) * 100);
-  margin-bottom: calc(var(--vh, 1vh) * 85);
+.work-list > div {
+  display: grid;
+  grid-template-columns: auto 10vw 30vw;
+  gap: 10px;
+  border-bottom: 1px solid black;
+  padding: 0px;
+  width: calc(100vw - 6vh);
+  align-items: center;
 }
 
-.text {
-  width: calc(90vw - 8vmin);
+.work-list > div > a {
+  text-align: left;
+  padding: 10px 0 10px 20px;
 }
 
-.lastprojects{
-  font-size: 2.5vmax;
+.work-list > div > span:nth-child(2) {
+  text-align: left;
+  padding: 10px 0;
 }
 
-.footer {
-  font-size: 3vmax;
+.work-list > div > span:nth-child(3) {
+  text-align: center;
+  padding: 10px 0;
 }
 
-#show {
-  width: 90vw;
-  height: auto;
+
+@media screen and (max-width: 650px) {
+  .content {
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
+    margin-bottom: calc(var(--vh, 1vh) * 85);
+  }
+
+  .text {
+    width: calc(90vw - 8vmin);
+  }
+
+  .infos > p {
+    display: block;
+  }
+
+  .projects {
+    font-size: 3vmax;
+  }
+
+  #tabouret {
+    width: 50vw;
+    height: auto;
+    bottom: 17vh;
+  }
+
+  .work-list > div {
+    font-size: 3vmax;
+    grid-template-columns: auto 1fr auto;
+  }
+  .work-list > div > a {
+    padding: 7px 0 7px 0px;
+  }
+  .work-list > div > span:nth-child(2) {
+    display: none;
+  }
+  .work-list > div > span:nth-child(3) {
+    text-align: right;
   }
 
 }
