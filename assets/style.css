@@ -72,7 +72,6 @@ a:hover {
     float: left;
     height: 4vmax;
     margin-right: 20px;
-    filter: blur(2px);
 }
 
 .pmlogoturn {
@@ -82,14 +81,9 @@ a:hover {
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    filter: blur(2px);
-  }
-  50%{
-    filter: blur(0px);
   }
   100% {
     transform: rotate(360deg);
-    filter: blur(2px);
   }
 }
 
