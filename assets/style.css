@@ -94,9 +94,9 @@ a:hover {
 }
 
 .text {
-  font-size: 4vmax;
+  font-size: 3vmax;
   line-height: 1.4;
-  width: 70vw;
+  width: 60vw;
   z-index: 4;
   position: absolute;
 }
@@ -115,6 +115,7 @@ a:hover {
 #tabouret {
   position: absolute;
   max-height: 60vh;
+  max-width: 50vw;
   right: 5vw;
   bottom: 10vh;
   z-index: 1;
@@ -219,10 +220,12 @@ WORKS LIST
 
   .text {
     width: calc(90vw - 8vmin);
+    font-size: 4vmax;
   }
 
   .infos > p {
     display: block;
+    font-size: 3vmax;
   }
 
   .projects {
