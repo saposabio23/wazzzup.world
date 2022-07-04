@@ -179,27 +179,36 @@ MAIL STUFF
 WORKS LIST
 -------------------------------------- */
 
-.work-list > div {
+
+.work-list > a  {
   display: grid;
   grid-template-columns: auto 10vw 30vw;
   gap: 10px;
+  overflow-x: hidden;
   border-bottom: 1px solid black;
   padding: 0px;
   width: calc(100vw - 6vh);
   align-items: center;
 }
 
-.work-list > div > a {
-  text-align: left;
-  padding: 10px 0 10px 20px;
+.work-list > a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 50%);
+  border-radius: 25px;
 }
 
-.work-list > div > span:nth-child(2) {
+.work-list > a > span:nth-child(1)  {
   text-align: left;
+  padding: 10px 0 10px 10px;
+}
+
+.work-list > a > span:nth-child(2) {
+  text-align: center;
   padding: 10px 0;
 }
 
-.work-list > div > span:nth-child(3) {
+.work-list > a > span:nth-child(3) {
   text-align: center;
   padding: 10px 0;
 }
