@@ -189,28 +189,27 @@ WORKS LIST
   padding: 0px;
   width: calc(100vw - 6vh);
   align-items: center;
+  padding: 10px 0;
 }
 
 .work-list > a:hover {
   cursor: pointer;
   text-decoration: none;
-  background-color: hsl(0, 0%, 50%);
-  border-radius: 25px;
+  opacity: 0.5;
 }
 
 .work-list > a > span:nth-child(1)  {
   text-align: left;
-  padding: 10px 0 10px 10px;
+
 }
 
 .work-list > a > span:nth-child(2) {
   text-align: center;
-  padding: 10px 0;
+
 }
 
 .work-list > a > span:nth-child(3) {
   text-align: center;
-  padding: 10px 0;
 }
 
 
@@ -241,17 +240,20 @@ WORKS LIST
     bottom: 17vh;
   }
 
-  .work-list > div {
-    font-size: 3vmax;
+  .work-list > a  {
+    font-size: 2.5vmax;
     grid-template-columns: auto 1fr auto;
   }
-  .work-list > div > a {
-    padding: 7px 0 7px 0px;
+
+  .work-list > a > span:nth-child(1)  {
+    text-align: left;
   }
-  .work-list > div > span:nth-child(2) {
+
+  .work-list > a > span:nth-child(2) {
     display: none;
   }
-  .work-list > div > span:nth-child(3) {
+
+  .work-list > a > span:nth-child(3) {
     text-align: right;
   }
 
