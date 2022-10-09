@@ -1,16 +1,16 @@
 /* -----------------------------------
 IPHONE HEIGHT
--------------------------------------- */
-window.onload = mobileWindow();
+// -------------------------------------- */
+// window.onload = mobileWindow();
 
-function mobileWindow() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  console.log("VH on mobiles", vh);
-}
+// function mobileWindow() {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+//   console.log("VH on mobiles", vh);
+// }
 
-window.addEventListener("resize", mobileWindow, false);
-window.addEventListener("orientationchange", mobileWindow, false);
+// window.addEventListener("resize", mobileWindow, false);
+// window.addEventListener("orientationchange", mobileWindow, false);
 
 /* -----------------------------------
 RANDOM IMAGE
@@ -24,6 +24,20 @@ RANDOM IMAGE
 // }
 
 // $show.addEventListener('click', displayImages);
+
+
+/* -----------------------------------
+LOGO TURN
+-------------------------------------- */
+// var $pmlogo = document.querySelector('#wip');
+
+// function pmTurn() {
+//       $pmlogo.classList.add("pmlogoturn");
+//    setTimeout(function(){
+//       $pmlogo.classList.remove("pmlogoturn");
+//   }, 1000);
+// }
+// $pmlogo.addEventListener('mouseenter', pmTurn, false);
 
 
 /* -----------------------------------
@@ -45,16 +59,3 @@ function copyMail() {
         }, 1000);
       }, 1500);
 }
-
-/* -----------------------------------
-LOGO TURN
--------------------------------------- */
-var $pmlogo = document.querySelector('#wip');
-
-function pmTurn() {
-      $pmlogo.classList.add("pmlogoturn");
-   setTimeout(function(){
-      $pmlogo.classList.remove("pmlogoturn");
-  }, 1000);
-}
-$pmlogo.addEventListener('mouseenter', pmTurn, false);
