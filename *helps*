@@ -1,0 +1,45 @@
+<div class="cursor"></div>
+
+// /* -----------------------------------
+// Touch feedback
+// -------------------------------------- */
+.cursor {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+    transition: all 0s;
+    z-index: 999;
+  }
+  
+  .cursor.click {
+    width: 50px;
+    height: 50px;
+    left: -25px;
+    top: -25px;
+    opacity: 0;
+    transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
+    z-index: 999;
+  
+  }
+
+
+
+// /* -----------------------------------
+// Touch feedback
+// -------------------------------------- */
+
+document.addEventListener("mousemove", event => {
+  document.getElementsByClassName("cursor")[0].style.transform = "translate(" + event.pageX + "px, " + event.pageY + "px)";
+})
+
+document.addEventListener("click", event => {
+  document.getElementsByClassName("cursor")[0].classList.add("click")
+  setTimeout(() => {
+    document.getElementsByClassName("cursor")[0].classList.remove("click")
+  }, 250)
+})
