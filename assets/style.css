@@ -216,6 +216,13 @@ MAIL STUFF
   transition: all .5s ease-in-out;
 }
 
+/* -----------------------------------
+CURSOR
+-------------------------------------- */
+.cursor {
+  display: none;
+}
+
 @media screen and (max-width: 650px) {
 
   html {
@@ -248,5 +255,34 @@ MAIL STUFF
   .text p{
     margin: var(--spacing-s) 10px var(--spacing-s) var(--spacing-s);
   }
+
+  /* -----------------------------------
+CURSOR
+-------------------------------------- */
+.cursor {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  transition: all 0s;
+  z-index: 999;
+  display: block;
+}
+
+.cursor.click {
+  width: 50px;
+  height: 50px;
+  left: -25px;
+  top: -25px;
+  opacity: 0;
+  transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
+  z-index: 999;
+
+}
+
 
 }
