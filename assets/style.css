@@ -19,8 +19,35 @@
   --border-rad: 20px;
   --spacing-m: 25px;
   --spacing-s: 17px;
-  
 
+}
+
+.time{
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+  background: hsl(0, 0%, 97%);
+  border-radius: var(--border-rad);
+  line-height: 1;
+}
+
+#nightscreen{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0; left: 0;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  color: snow;
+  align-items: center;
+  text-align: center;
+}
+
+.night{
+  display: none !important;
 }
 
 html,
@@ -232,7 +259,7 @@ CURSOR
 
   .content {
     margin-left: 50vw;
-    margin-top: 20vh;
+    margin-top: 30px;
     transform: translateX(-50%);
     width: 85%;
     border-radius: var(--border-rad);
@@ -251,7 +278,7 @@ CURSOR
     max-width: 60px;
     margin: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
   }
-  
+
   .text p{
     margin: var(--spacing-s) 10px var(--spacing-s) var(--spacing-s);
   }
