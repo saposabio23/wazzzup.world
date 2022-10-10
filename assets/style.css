@@ -25,12 +25,13 @@
 .time{
   position: fixed;
   left: 30px;
-  bottom: 30px;
+  top: 30px;
   padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
   background: hsl(0, 0%, 97%);
   border-radius: var(--border-rad);
   line-height: 1;
+  font-size: 0.9rem;
 }
 
 #nightscreen{
@@ -94,8 +95,8 @@ a:hover {
 
 .content {
   margin-left: 50vw;
-  margin-top: 80px;
-  transform: translateX(-50%);
+  margin-top: 50vh;
+  transform: translate(-50%, -50%);
   width: 500px;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
   background: hsl(0, 0%, 97%);
@@ -225,7 +226,7 @@ MAIL STUFF
   padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
   z-index: 1;
   position: relative;
-  transform: translate(-50%,-105%);
+  transform: translate(-50%,-305%);
   width: 400px;
   margin-left: 50vw;
   text-align: center;
@@ -233,7 +234,7 @@ MAIL STUFF
 }
 
 .mailappear{
-  transform: translate(-50%,-0%) !important;
+  transform: translate(-50%,-200%) !important;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   transition: all .5s ease-in-out;
 }
@@ -258,9 +259,6 @@ CURSOR
   }
 
   .content {
-    margin-left: 50vw;
-    margin-top: 30px;
-    transform: translateX(-50%);
     width: 85%;
     border-radius: var(--border-rad);
   }
@@ -268,7 +266,7 @@ CURSOR
   #mailcopied{
     border-radius: 0 0 var(--border-rad) var(--border-rad);
     padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
-    transform: translate(-50%,-100%);
+    transform: translate(-50%,-200%);
     width: 75%;
     margin-left: 50vw;
   }
