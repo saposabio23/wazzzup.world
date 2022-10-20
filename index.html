@@ -24,27 +24,30 @@
     <!-- Links -->
     <link type="text/css" rel="stylesheet" href="assets/style.css" />
 
-    <script defer data-domain="wazzzzup.world" src="https://plausible.io/js/plausible.js"></script>
+    <script defer data-domain="wazzzup.world" src="https://plausible.io/js/plausible.js"></script>
 
   </head>
   <body>
 
     <div class="content">
-      <div class="text">
-        <p>
-          I'm Pablo Moreno, a young multidisciplinary graphic designer, studying in France and working down to Bilbao.
-        </p>
-        <img src="assets/icon.png" style="width: 100px; height: 100px;"></img>
+      <div class="box">
+        <div class="text">
+          <p>
+            I'm Pablo Moreno, a young <a href="img/primary.webp">multidisciplinary</a> graphic designer, studying in <a href="https://goo.gl/maps/ENczm1YMgmbx1FLT8">France</a> and working down to Bilbao.
+          </p>
+          <img src="img/icon2.jpg" style="width: 100px; height: 100px;"></img>
+        </div>
+        <div class="infos">
+          <a onclick="copyMail()" rel="me">E-mail</a>
+          <a href="https://read.cv/pablomoreno" >CV</a>
+        </div>
       </div>
-      <div class="infos">
-        <a onclick="copyMail()" rel="me">E-mail</a>
-        <a href="https://read.cv/pablomoreno" >CV</a>
-      </div>
+      <div id="mailcopied">email copied!</div>
     </div>
-    <div id="mailcopied">email copied!</div>
-
-
-    <div id="nightscreen">wazzzup.world is sleeping<br>Visit it during the 🌤️</div>
+    
+    <div id="nightscreen">
+      <p id="sleep-icons">For ♻️ this website is 💤. <br> Visit it during the 🌞.</p>
+  </div>
 
     <div class="sleep">
 

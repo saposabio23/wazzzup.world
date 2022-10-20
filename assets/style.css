@@ -24,8 +24,8 @@
 
 .time{
   position: fixed;
-  left: 30px;
-  top: 30px;
+  left: 20px;
+  top: 20px;
   padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
   background: hsl(0, 0%, 97%);
@@ -45,6 +45,7 @@
   color: snow;
   align-items: center;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .night{
@@ -90,25 +91,30 @@ a {
 
 a:hover {
   color: inherit;
+  text-decoration: underline;
+  cursor:ne-resize;
 }
 
-
 .content {
-  margin-left: 50vw;
-  margin-top: 50vh;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  align-content: center;
+}
+
+.box {
   width: 500px;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
   background: hsl(0, 0%, 97%);
   border-radius: var(--border-rad);
   z-index: 2;
-  position: relative;
+  margin: auto;
 }
 
 .text{
   display: flex;
 }
-
 
 .text p{
   margin: var(--spacing-m) 10px var(--spacing-s) var(--spacing-m);
@@ -129,7 +135,6 @@ a:hover {
   align-items: center;
   text-align: center;
   border-top: 1px solid #80808040;
-  z-index:3;
 }
 
 .infos > a{
@@ -139,7 +144,6 @@ a:hover {
 }
 
 .infos > a:nth-child(1) {
-
   border-right: 1px solid #80808040;
   border-radius: 0 0 0 var(--border-rad);;
 }
@@ -152,7 +156,7 @@ a:hover {
 .infos > a:nth-child(1):hover, .infos > a:nth-child(1):active {
   background: dodgerblue;
   text-decoration: none;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .infos > a:nth-child(2):hover, .infos > a:nth-child(2):active  {
@@ -161,86 +165,31 @@ a:hover {
   cursor:ne-resize;
 }
 
-/* 
-.projects {
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
-  background: hsl(0, 0%, 97%);
-  border-radius: 20px;
-  overflow: scroll;
-  height: 60vh;
-  width: calc(70vw - 150px);
-
-  top: 50px;
-  position: absolute;
-  right: 50px;
-}
-
-.work-list > a {
-  font-size: 1.5rem;
-  display: grid;
-  grid-template-columns: auto 10% 30%;
-  gap: 10px;
-  overflow-x: hidden;
-  border-bottom: 1px solid black;
-  align-items: center;
-  padding: 20px 25px;
-}
-
-.work-list > a:hover {
-  text-decoration: none;
-  background: yellowgreen;
-}
-
-.work-list > a:first-child:hover {
-  border-radius: 20px 20px 0 0;
-}
-
-.work-list > a:last-child:hover{
-  border-radius: 0 0 20px 20px;
-}
-
-.work-list > a:last-child{
-  border-bottom: none !important;
-}
-
-.work-list > a > span:nth-child(1)  {
-  text-align: left;
-}
-
-.work-list > a > span:nth-child(2) {
-  text-align: center;
-}
-
-.work-list > a > span:nth-child(3) {
-  text-align: right;
-} */
 
 /* -----------------------------------
 MAIL STUFF
 -------------------------------------- */
-
 #mailcopied{
   height: auto;
   background: hsl(0, 0%, 97%);
   border-radius: 0 0 var(--border-rad) var(--border-rad);
   padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
   z-index: 1;
-  position: relative;
-  transform: translate(-50%,-305%);
   width: 400px;
-  margin-left: 50vw;
   text-align: center;
   background-color: salmon;
+  margin: auto;
+  transform: translateY(-100%);
 }
 
 .mailappear{
-  transform: translate(-50%,-200%) !important;
+  transform: translateY(0%) !important;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   transition: all .5s ease-in-out;
 }
 
 .mailexit{
-  transform: translate(-50%,-100%);
+  transform: translateY(-100%) !important;
   transition: all .5s ease-in-out;
 }
 
@@ -258,17 +207,16 @@ CURSOR
     line-height: 1.4;
   }
 
-  .content {
+  .box {
     width: 85%;
     border-radius: var(--border-rad);
+    margin: auto;
   }
 
   #mailcopied{
     border-radius: 0 0 var(--border-rad) var(--border-rad);
     padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
-    transform: translate(-50%,-200%);
     width: 75%;
-    margin-left: 50vw;
   }
 
   .text img{
@@ -281,33 +229,29 @@ CURSOR
     margin: var(--spacing-s) 10px var(--spacing-s) var(--spacing-s);
   }
 
-  /* -----------------------------------
-CURSOR
--------------------------------------- */
-.cursor {
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  background-color: grey;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 1;
-  transition: all 0s;
-  z-index: 999;
-  display: block;
-}
 
-.cursor.click {
-  width: 50px;
-  height: 50px;
-  left: -25px;
-  top: -25px;
-  opacity: 0;
-  transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
-  z-index: 999;
+  .cursor {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+    transition: all 0s;
+    z-index: 999;
+    display: block;
+  }
 
-}
+  .cursor.click {
+    width: 50px;
+    height: 50px;
+    left: -25px;
+    top: -25px;
+    opacity: 0;
+    transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
+    z-index: 999;
 
-
-}
+  }
+  }
