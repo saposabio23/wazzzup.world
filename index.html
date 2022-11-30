@@ -26,32 +26,80 @@
 
     <script defer data-domain="wazzzup.world" src="https://plausible.io/js/plausible.js"></script>
 
+
   </head>
   <body>
+    <section class="first">
+      <div class="time"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+      <img src="img/icon2.jpg" style="width: 40px; height: 40px;" id="me"></img>
+    </section>
 
-    <div class="content">
-      <div class="box">
-        <div class="text">
-          <p>
-            I'm Pablo Moreno, a young <a href="img/primary.webp">multidisciplinary</a> graphic designer, studying in <a href="https://goo.gl/maps/ENczm1YMgmbx1FLT8">France</a> and working down to Bilbao.
-          </p>
-          <img src="img/icon2.jpg" style="width: 100px; height: 100px;"></img>
-        </div>
-        <div class="infos">
-          <a onclick="copyMail()" rel="me">E-mail</a>
-          <a href="https://read.cv/pablomoreno" >CV</a>
-        </div>
-      </div>
-      <div id="mailcopied">email copied!</div>
+    <section class="second">
+    <div class="infos">
+      <a onclick="copyMail()" rel="me">E-mail</a>
+      <a href="https://read.cv/pablomoreno">CV</a>
     </div>
-    
-    <div id="nightscreen">
-      <p id="sleep-icons">For ♻️ this website is 💤. <br> Visit it during the 🌞.</p>
+
+    <div class="work-list">
+      <div>
+        <div class="square" id="vivir"><img src="img/vivir-sin-ti-fav.ico" style="width: 25px; height: 25px;"></div>
+        <a href="https://www.vivirsinti-libro.com" target="_blank">Vivir sin Ti book</a>
+        <span>website</span>
+        <span>2022</span>
+      </div>
+      <div>
+        <div class="square" id="vivir"><img src="img/wine-decanter.png" style="width: 25px; height: 25px;"></div>
+        <a href="https://vimeo.com/675012283" target="_blank">Wine Decanter Glass</a>
+        <span>3D video</span>
+        <span>2022</span>
+      </div>
+      <div>
+        <div class="square" id="vivir"><img src="img/andrea-favico.ico" style="width: 25px; height: 25px;"></div>
+        <a href="https://andreaguilera.com/" target="_blank">Andrea Aguilera's portfolio</a>
+        <span>website</span>
+        <span>2022</span>
+      </div>
+      <div>
+        <div class="square" id="vivir"><img src="img/glace-sans-tain.png" style="width: 25px; height: 25px;"></div>
+        <a href="https://glace-sans-tain.netlify.app/" target="_blank">Mini-essay: Glace sans tain</a>
+        <span>essay + website</span>
+        <span>2021</span>
+      </div>
+      <div>
+        <div class="square" id="vivir"><img src="img/juan-moreno.ico" style="width: 25px; height: 25px;"></div>
+        <a href="https://www.soyjuanmoreno.com" target="_blank">Juan Moreno personal site</a>
+        <span>website</span>
+        <span>2021</span>
+      </div>
+      <div>
+        <div class="square" id="vivir"><img src="img/carte-voeux.ico" style="width: 25px; height: 25px;"></div>
+        <a href="https://carte-de-voeux-2021.netlify.app/" target="_blank">2021 New Year whises</a>
+        <span>print + website</span>
+        <span>2020</span>
+      </div>
+       <div>
+         <div class="square" id="vivir"><img src="img/morenoarquitecto.png" style="width: 25px; height: 25px;"></div>
+        <a href="https://morenoarquitecto.com" target="_blank">Eugenio Moreno portfolio</a>
+        <span>website</span>
+        <span>2020</span>
+      </div>
+       <div>
+         <div class="square" id="vivir"><img src="img/matilde-esteban.webp" style="width: 25px; height: 25px;"></div>
+        <a href="https://me-arquitectotecnico.com" target="_blank">Matilde Esteban portfolio</a>
+        <span>website</span>
+        <span>2019</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="mailcopied">E-mail copied!</div>
+
+
+  <div id="nightscreen">
+      <p id="sleep-icons">For ♻️ reasons this website is 💤<br> Visit it during the 🌞</p>
   </div>
 
     <div class="sleep">
-
-      <div class="time"><span id="minutes">00</span>:<span id="seconds">00</span></div>
 
       <div class="cursor"></div>
 

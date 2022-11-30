@@ -17,39 +17,12 @@
 :root{
 
   --border-rad: 20px;
-  --spacing-m: 25px;
-  --spacing-s: 17px;
+  --spacing-l: 20px;
+  --spacing-m: 12px;
+  --spacing-s: 6px;
 
-}
+  --lines: hsla(0, 0%, 0%, 0.2);
 
-.time{
-  position: fixed;
-  left: 20px;
-  top: 20px;
-  padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
-  background: hsl(0, 0%, 97%);
-  border-radius: var(--border-rad);
-  line-height: 1;
-  font-size: 0.9rem;
-}
-
-#nightscreen{
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  top: 0; left: 0;
-  position: fixed;
-  z-index: 999;
-  display: grid;
-  color: snow;
-  align-items: center;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.night{
-  display: none !important;
 }
 
 html,
@@ -91,114 +64,205 @@ a {
 
 a:hover {
   color: inherit;
-  text-decoration: underline;
-  cursor:ne-resize;
+  text-decoration: none;
 }
 
-.content {
+
+
+/* -----------------------------------
+TIMER
+-------------------------------------- */
+
+
+/* -----------------------------------
+NIGHT STUFF
+-------------------------------------- */
+#nightscreen{
   height: 100%;
   width: 100%;
-  position: absolute;
+  background-color: black;
+  top: 0; left: 0;
+  position: fixed;
+  z-index: 999;
   display: grid;
-  align-content: center;
+  color: snow;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-.box {
-  width: 500px;
+.night{
+  display: none !important;
+}
+
+/* -----------------------------------
+FIRST SECTION
+-------------------------------------- */
+.first {
+  width: 100%;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+  border-bottom: 1px solid var(--lines);
   background: hsl(0, 0%, 97%);
-  border-radius: var(--border-rad);
   z-index: 2;
   margin: auto;
-}
-
-.text{
+  position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: var(--spacing-m) var(--spacing-m) 12px var(--spacing-m);
+  z-index: 999;
 }
 
-.text p{
-  margin: var(--spacing-m) 10px var(--spacing-s) var(--spacing-m);
+.time{
+  border-radius: var(--border-rad);
+  line-height: 1;
+  font-size: 0.9rem;
 }
 
-.text img{
-  max-height: 100px;
-  max-width: 100px;
+#me{
+  max-height: 40px;
+  max-width: 40px;
   float: right;
   border-radius: 50%;
-  margin: var(--spacing-m) var(--spacing-m) var(--spacing-s) 0;
+}
+
+#me:hover {
+  cursor: pointer;
+  animation: uhhuhhh 1.5s ease-in-out infinite;
+  animation-direction: alternate;
+  transform: scaleX(120%) scaleY(100%);
+
+}
+
+@keyframes uhhuhhh {
+  0% {
+    transform: scaleX(100%) scaleY(100%);
+  }
+  50% {
+    transform: scaleX(120%) scaleY(100%);
+  }
+  100% {
+    transform: scaleX(100%) scaleY(120%);
+  }
 }
 
 .infos{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0px;
   align-items: center;
   text-align: center;
-  border-top: 1px solid #80808040;
+  border-bottom: 1px solid var(--lines);
+  border-radius: var(--border-rad);
+  width: 100%;
+  margin-bottom: var(--spacing-l);
+  height: 60px;
 }
 
-.infos > a{
+.activate {
+  transform: translateY(+60px) !important;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.infos > a {
   background: hsl(0, 0%, 97%);
   border-radius: var(--border-rad);
-  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-s);
+  padding: 8px;  height: 100%;
+  align-items: center;
+  display: inherit;
 }
 
 .infos > a:nth-child(1) {
-  border-right: 1px solid #80808040;
-  border-radius: 0 0 0 var(--border-rad);;
+  border-right: 1px solid var(--lines);
+  border-radius: 0 0 0 var(--border-rad);
 }
 
 .infos > a:nth-child(2) {
   border-radius: 0 0 var(--border-rad) 0;
 }
 
-
 .infos > a:nth-child(1):hover, .infos > a:nth-child(1):active {
   background: dodgerblue;
-  text-decoration: none;
   cursor: pointer;
 }
 
 .infos > a:nth-child(2):hover, .infos > a:nth-child(2):active  {
   background: gold;
-  text-decoration: none;
-  cursor:ne-resize;
 }
 
+
+/* -----------------------------------
+PORJECT LIST SECTION
+-------------------------------------- */
+.second {
+  transition: all 0.5s ease-in-out;
+  z-index: 997;
+}
+
+.square{
+  height: 25px; width: 25px;
+ 
+}
+
+.work-list > div {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  margin: 10px 20px;
+}
+
+.work-list div:hover {
+  opacity: 0.5;
+}
+
+.work-list  div span:nth-child(4) {
+  text-align: left;
+}
+
+.work-list  div:last-child {
+  border-bottom: none;
+}
 
 /* -----------------------------------
 MAIL STUFF
 -------------------------------------- */
 #mailcopied{
   height: auto;
+  position: fixed;
+  left: 50vw;
+  transform: translate(-50%, 100%);
+  bottom: 0vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   background: hsl(0, 0%, 97%);
-  border-radius: 0 0 var(--border-rad) var(--border-rad);
-  padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
-  z-index: 1;
-  width: 400px;
-  text-align: center;
-  background-color: salmon;
-  margin: auto;
-  transform: translateY(-100%);
+  border-radius: var(--border-rad);
+  z-index: 2;
+  transition: all .5s ease-in-out;
+  font-size: 8vw;
+  padding: var(--spacing-l) var(--spacing-l) var(--spacing-m) var(--spacing-l);
+  line-height: 1;
+  z-index:998;
+  width: max-content;
 }
 
 .mailappear{
-  transform: translateY(0%) !important;
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  bottom: 50vh !important;
+  transform: translate(-50%, 50%) !important;
   transition: all .5s ease-in-out;
 }
-
 .mailexit{
-  transform: translateY(-100%) !important;
+  bottom: 100vh !important;
+  transform: translate(-50%, -100%) !important;
+  transition: all .5s ease-in-out;
+}
+.mailreset{
+  display: none !important;
+  transform: translate(-50%, 110%);
+  bottom: 0vh;
   transition: all .5s ease-in-out;
 }
 
-/* -----------------------------------
-CURSOR
--------------------------------------- */
-.cursor {
-  display: none;
-}
 
 @media screen and (max-width: 650px) {
 
@@ -207,34 +271,11 @@ CURSOR
     line-height: 1.4;
   }
 
-  .box {
-    width: 85%;
-    border-radius: var(--border-rad);
-    margin: auto;
-  }
-
-  #mailcopied{
-    border-radius: 0 0 var(--border-rad) var(--border-rad);
-    padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
-    width: 75%;
-  }
-
-  .text img{
-    max-height: 60px;
-    max-width: 60px;
-    margin: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
-  }
-
-  .text p{
-    margin: var(--spacing-s) 10px var(--spacing-s) var(--spacing-s);
-  }
-
-
   .cursor {
     width: 0px;
     height: 0px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: skyblue;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -250,8 +291,17 @@ CURSOR
     left: -25px;
     top: -25px;
     opacity: 0;
-    transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
+    transition: width 0.50s, height 0.50s, left 0.50s, top 0.50s, opacity 0.50s;
     z-index: 999;
 
+  }
+
+  .work-list > div {
+    grid-template-columns: auto 1fr;
+    row-gap: 50px;
+  }
+
+  .work-list  div span:nth-child(4),span:nth-child(3) {
+    display: none;
   }
   }
