@@ -114,11 +114,6 @@ FIRST SECTION
   z-index: 999;
 }
 
-.time{
-  border-radius: var(--border-rad);
-  line-height: 1;
-  font-size: 0.9rem;
-}
 
 #me{
   max-height: 40px;
@@ -202,20 +197,22 @@ PORJECT LIST SECTION
 
 .square{
   height: 25px; width: 25px;
- 
+
 }
 
 .work-list > div {
   display: grid;
-  grid-template-columns: auto 2fr 1fr auto;
-  gap: 10px;
+  grid-template-columns: auto 2fr 1fr 0fr;
+  gap: 20px;
   align-items: baseline;
   margin: 10px 20px;
+  text-align: left;
 }
 
 .work-list div:hover {
   opacity: 0.5;
 }
+
 
 .work-list  div span:nth-child(4) {
   text-align: left;
@@ -299,6 +296,7 @@ MAIL STUFF
   .work-list > div {
     grid-template-columns: auto 1fr;
     row-gap: 50px;
+    font-size: 0.9rem;;
   }
 
   .work-list  div span:nth-child(4),span:nth-child(3) {
