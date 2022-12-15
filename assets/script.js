@@ -77,42 +77,40 @@ function touch() {
     }, 330)
   })
 }
+// /* -----------------------------------
+// TIMER
+// -------------------------------------- */
+    function timer() {var second = 0;
+      function pad ( value ) { return value > 9 ? value : "0" + value; }
+      setInterval( function(){
+          document.getElementById("seconds").innerHTML=pad(++second%60);
+          document.getElementById("minutes").innerHTML=pad(parseInt(second/60,10));
+      }, 1000);
+    }
 
 // /* -----------------------------------
 // SLEEP WEB
 // -------------------------------------- */
+
+
 function isItNight() {
   var $nighScreen = document.getElementById("nightscreen");
     var day = new Date();
     var hr = day.getHours();
     console.log(hr);
     if ((hr == 0) || (hr == 1) || (hr == 2) || (hr == 3) || (hr == 4) || (hr == 5) || (hr == 6)){
-        document.title = 'good night 💤';
+        document.title = 'Sleeping... 💤';
         offAtNight()
+        
     }
     if ((hr == 7) || (hr == 8) || (hr == 9) || (hr == 10) || (hr == 11) || (hr == 12) || (hr == 13) || (hr == 14) || (hr == 15) || (hr == 16) || (hr == 17) || (hr == 18) || (hr == 19) || (hr == 20) || (hr == 21) || (hr == 22) || (hr == 23)){
       $nighScreen.classList.add("night")
+      timer()
       touch()
     }
   }
-
   function offAtNight() {
     document.querySelector('.content').remove();
     document.querySelector('.sleep').remove();
     document.querySelector('#mailcopied').remove();
    }
-
-
-// /* -----------------------------------
-// ME ACTIVATE
-// -------------------------------------- */
-var $me = document.querySelector('#me');
-var $infos = document.querySelector('.second');
-
-
-function activateMe() {
-      $infos.classList.toggle("activate");
-}
-$me.addEventListener('click', activateMe, false);
-
-
