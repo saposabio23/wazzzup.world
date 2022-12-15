@@ -1,28 +1,39 @@
-@font-face {
-  font-family: "Aerobik";
-  src: url("fonts/Aerobik-Regular.woff2") format("woff2"),
-    url("fonts/Aerobik-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ambitregular";
-  src: url("fonts/ambit-regular-webfont.woff2") format("woff2"),
-    url("fonts/ambit-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 :root{
 
   --border-rad: 20px;
-  --spacing-l: 20px;
-  --spacing-m: 12px;
-  --spacing-s: 6px;
+  --spacing-m: 25px;
+  --spacing-s: 17px;
 
-  --lines: hsla(0, 0%, 0%, 0.2);
+}
 
+.time{
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+  background: hsl(0, 0%, 97%);
+  border-radius: var(--border-rad);
+  line-height: 1;
+  font-size: 0.9rem;
+}
+
+#nightscreen{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0; left: 0;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  color: snow;
+  align-items: center;
+  text-align: center;
+}
+
+.night{
+  display: none !important;
 }
 
 html,
@@ -35,7 +46,7 @@ p {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: "ambitregular", sans-serif;
+  font-family: sans-serif;
   scrollbar-width: none;
 }
 
@@ -64,202 +75,166 @@ a {
 
 a:hover {
   color: inherit;
-  text-decoration: none;
 }
 
 
-
-/* -----------------------------------
-TIMER
--------------------------------------- */
-
-
-/* -----------------------------------
-NIGHT STUFF
--------------------------------------- */
-#nightscreen{
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  top: 0; left: 0;
-  position: fixed;
-  z-index: 999;
-  display: grid;
-  color: snow;
-  align-items: center;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.night{
-  display: none !important;
-}
-
-/* -----------------------------------
-FIRST SECTION
--------------------------------------- */
-.first {
-  width: 100%;
+.content {
+  margin-left: 50vw;
+  margin-top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 500px;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
-  border-bottom: 1px solid var(--lines);
   background: hsl(0, 0%, 97%);
+  border-radius: var(--border-rad);
   z-index: 2;
-  margin: auto;
-  position: fixed;
+  position: relative;
+}
+
+.text{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: var(--spacing-m) var(--spacing-m) 12px var(--spacing-m);
-  z-index: 999;
 }
 
 
-#me{
-  max-height: 40px;
-  max-width: 40px;
+.text p{
+  margin: var(--spacing-m) 10px var(--spacing-s) var(--spacing-m);
+}
+
+.text img{
+  max-height: 100px;
+  max-width: 100px;
   float: right;
   border-radius: 50%;
-}
-
-#me:hover {
-  cursor: pointer;
-  animation: uhhuhhh 1.5s ease-in-out infinite;
-  animation-direction: alternate;
-  transform: scaleX(120%) scaleY(100%);
-
-}
-
-@keyframes uhhuhhh {
-  0% {
-    transform: scaleX(100%) scaleY(100%);
-  }
-  50% {
-    transform: scaleX(120%) scaleY(100%);
-  }
-  100% {
-    transform: scaleX(100%) scaleY(120%);
-  }
+  margin: var(--spacing-m) var(--spacing-m) var(--spacing-s) 0;
 }
 
 .infos{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid var(--lines);
-  border-radius: var(--border-rad);
-  width: 100%;
-  margin-bottom: var(--spacing-l);
-  height: 60px;
+  border-top: 1px solid #80808040;
+  z-index:3;
 }
 
-.activate {
-  transform: translateY(+60px) !important;
-  transition: all 0.5s ease-in-out;
-
-}
-
-.infos > a {
+.infos > a{
   background: hsl(0, 0%, 97%);
   border-radius: var(--border-rad);
-  padding: 8px;  height: 100%;
-  align-items: center;
-  display: inherit;
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-s);
 }
 
 .infos > a:nth-child(1) {
-  border-right: 1px solid var(--lines);
-  border-radius: 0 0 0 var(--border-rad);
+
+  border-right: 1px solid #80808040;
+  border-radius: 0 0 0 var(--border-rad);;
 }
 
 .infos > a:nth-child(2) {
   border-radius: 0 0 var(--border-rad) 0;
 }
 
+
 .infos > a:nth-child(1):hover, .infos > a:nth-child(1):active {
   background: dodgerblue;
-  cursor: pointer;
+  text-decoration: none;
+  cursor: grab;
 }
 
 .infos > a:nth-child(2):hover, .infos > a:nth-child(2):active  {
   background: gold;
+  text-decoration: none;
+  cursor:ne-resize;
 }
 
+/* 
+.projects {
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+  background: hsl(0, 0%, 97%);
+  border-radius: 20px;
+  overflow: scroll;
+  height: 60vh;
+  width: calc(70vw - 150px);
 
-/* -----------------------------------
-PORJECT LIST SECTION
--------------------------------------- */
-.second {
-  transition: all 0.5s ease-in-out;
-  z-index: 997;
+  top: 50px;
+  position: absolute;
+  right: 50px;
 }
 
-.square{
-  height: 25px; width: 25px;
-
-}
-
-.work-list > div {
+.work-list > a {
+  font-size: 1.5rem;
   display: grid;
-  grid-template-columns: auto 2fr 1fr 0fr;
-  gap: 20px;
-  align-items: baseline;
-  margin: 10px 20px;
+  grid-template-columns: auto 10% 30%;
+  gap: 10px;
+  overflow-x: hidden;
+  border-bottom: 1px solid black;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.work-list > a:hover {
+  text-decoration: none;
+  background: yellowgreen;
+}
+
+.work-list > a:first-child:hover {
+  border-radius: 20px 20px 0 0;
+}
+
+.work-list > a:last-child:hover{
+  border-radius: 0 0 20px 20px;
+}
+
+.work-list > a:last-child{
+  border-bottom: none !important;
+}
+
+.work-list > a > span:nth-child(1)  {
   text-align: left;
 }
 
-.work-list div:hover {
-  opacity: 0.5;
+.work-list > a > span:nth-child(2) {
+  text-align: center;
 }
 
-
-.work-list  div span:nth-child(4) {
-  text-align: left;
-}
-
-.work-list  div:last-child {
-  border-bottom: none;
-}
+.work-list > a > span:nth-child(3) {
+  text-align: right;
+} */
 
 /* -----------------------------------
 MAIL STUFF
 -------------------------------------- */
+
 #mailcopied{
   height: auto;
-  position: fixed;
-  left: 50vw;
-  transform: translate(-50%, 100%);
-  bottom: 0vh;
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   background: hsl(0, 0%, 97%);
-  border-radius: var(--border-rad);
-  z-index: 2;
-  transition: all .5s ease-in-out;
-  font-size: 8vw;
-  padding: var(--spacing-l) var(--spacing-l) var(--spacing-m) var(--spacing-l);
-  line-height: 1;
-  z-index:998;
-  width: max-content;
+  border-radius: 0 0 var(--border-rad) var(--border-rad);
+  padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
+  z-index: 1;
+  position: relative;
+  transform: translate(-50%,-305%);
+  width: 400px;
+  margin-left: 50vw;
+  text-align: center;
+  background-color: salmon;
 }
 
 .mailappear{
-  bottom: 50vh !important;
-  transform: translate(-50%, 50%) !important;
-  transition: all .5s ease-in-out;
-}
-.mailexit{
-  bottom: 100vh !important;
-  transform: translate(-50%, -100%) !important;
-  transition: all .5s ease-in-out;
-}
-.mailreset{
-  display: none !important;
-  transform: translate(-50%, 110%);
-  bottom: 0vh;
+  transform: translate(-50%,-200%) !important;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
   transition: all .5s ease-in-out;
 }
 
+.mailexit{
+  transform: translate(-50%,-100%);
+  transition: all .5s ease-in-out;
+}
+
+/* -----------------------------------
+CURSOR
+-------------------------------------- */
+.cursor {
+  display: none;
+}
 
 @media screen and (max-width: 650px) {
 
@@ -268,38 +243,56 @@ MAIL STUFF
     line-height: 1.4;
   }
 
-  .cursor {
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    background-color: skyblue;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 1;
-    transition: all 0s;
-    z-index: 999;
-    display: block;
+  .content {
+    width: 85%;
+    border-radius: var(--border-rad);
   }
 
-  .cursor.click {
-    width: 50px;
-    height: 50px;
-    left: -25px;
-    top: -25px;
-    opacity: 0;
-    transition: width 0.50s, height 0.50s, left 0.50s, top 0.50s, opacity 0.50s;
-    z-index: 999;
-
+  #mailcopied{
+    border-radius: 0 0 var(--border-rad) var(--border-rad);
+    padding: 13px var(--spacing-s) var(--spacing-s) var(--spacing-s);
+    transform: translate(-50%,-200%);
+    width: 75%;
+    margin-left: 50vw;
   }
 
-  .work-list > div {
-    grid-template-columns: auto 1fr;
-    row-gap: 50px;
-    font-size: 0.9rem;;
+  .text img{
+    max-height: 60px;
+    max-width: 60px;
+    margin: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
   }
 
-  .work-list  div span:nth-child(4),span:nth-child(3) {
-    display: none;
+  .text p{
+    margin: var(--spacing-s) 10px var(--spacing-s) var(--spacing-s);
   }
-  }
+
+  /* -----------------------------------
+CURSOR
+-------------------------------------- */
+.cursor {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  transition: all 0s;
+  z-index: 999;
+  display: block;
+}
+
+.cursor.click {
+  width: 50px;
+  height: 50px;
+  left: -25px;
+  top: -25px;
+  opacity: 0;
+  transition: width 0.33s, height 0.33s, left 0.33s, top 0.33s, opacity 0.33s;
+  z-index: 999;
+
+}
+
+
+}
