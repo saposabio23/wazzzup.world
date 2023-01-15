@@ -1,0 +1,233 @@
+:root{
+  --border-rad: 20px;
+  --spacing-m: 25px;
+  --spacing-s: 17px;
+
+}
+
+html,
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: 'Nunito';
+
+  /* scrollbar-width: none; */
+}
+
+/* 
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  background: hsl(0, 0%, 97%);
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  overflow: scroll;
+
+  /* cursor: url(../pointer/blue.cur), pointer; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* -----------------------------------
+SCREEN HOME
+-------------------------------------- */
+.screen-home{
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  z-index: 1;
+}
+
+.middle{
+  position: fixed;
+  top: 50vh; left: 50vw;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+}
+/* -----------------------------------
+CARD STUFF
+-------------------------------------- */
+.card {
+  width: 500px;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+  background: hsl(0, 0%, 97%);
+  border-radius: var(--border-rad);
+  position: relative;
+  z-index: 2;
+}
+
+.card-text{
+  display: flex;
+}
+
+.card-text p{
+  margin: var(--spacing-m) 10px var(--spacing-s) var(--spacing-m);
+}
+
+.card-text img{
+  max-height: 100px;
+  max-width: 100px;
+  float: right;
+  border-radius: 50%;
+  margin: var(--spacing-m) var(--spacing-m) var(--spacing-s) 0;
+}
+
+.card-contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #80808040;
+}
+
+.card-contact > a{
+  background: hsl(0, 0%, 97%);
+  border-radius: var(--border-rad);
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-s);
+}
+
+.card-contact > a:nth-child(1) {
+  border-right: 1px solid #80808040;
+  border-radius: 0 0 0 var(--border-rad);;
+}
+
+.card-contact > a:nth-child(2) {
+  border-radius: 0 0 var(--border-rad) 0;
+}
+
+.card-contact > a:nth-child(1):hover, .card-contact > a:nth-child(1):active {
+  background: dodgerblue;
+  text-decoration: none;
+  cursor: grab;
+}
+
+.card-contact > a:nth-child(2):hover, .card-contact > a:nth-child(2):active  {
+  background: gold;
+  text-decoration: none;
+  cursor:ne-resize;
+}
+
+
+/* -----------------------------------
+SCREEN PROJECTS
+-------------------------------------- */
+.screen-projects{
+  border-top: 1px solid black;
+
+  background-color: slategrey;
+  z-index: 2;
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.selecta-bk {
+  background-color: red !important;
+  transition: all .3s ease-in-out;
+}
+
+.projects{
+  height: auto;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+  z-index: 1;
+}
+
+.projects a {
+  height: auto;
+  aspect-ratio: 4/3;
+  box-sizing: border-box;
+
+  display: grid;
+  align-items: center;
+  justify-self: center;
+  padding: 50px;
+  /*! background-color: indigo; */
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s ease-in-out, display 1s ease-in-out;
+}
+
+.projects img{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.projects-hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity .3s ease-in-out, display 1s ease-in-out;
+  display: none !important;
+}
+
+
+/* -----------------------------------
+CONTROLS
+-------------------------------------- */
+.controls {
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 0.7rem;
+  /*! background-color: indigo; */
+  color: snow;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.controls > div > div > span {
+  margin-right: 8px;
+}
+
+.controls div {
+  display: flex;
+  align-items: center;
+}
+
+.controls-filtre {
+  display: flex;
+  column-gap: 20px;
+}
+
+.controls-selecta {
+
+}
+

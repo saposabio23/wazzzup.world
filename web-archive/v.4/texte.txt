@@ -1,0 +1,20 @@
+<a href="index_cast.html"><img src="baul/man.gif" style="width: 20%"></a>
+
+
+Mise en page du texte "Studio 5, Les &eacute;toiles" &eacute;crit par J.B. Ballard
+
+Livre d'artiste d&eacute;di&eacute; &agrave; Borges. Texte imprim&eacute; au plomb et illustrations en lithographie et s&eacute;rigraphie
+
+Communication graphique de l'exposition "Sens de lecture" &agrave; la FAC Diderot, 13&egrave;me
+
+Proposition de signal&eacute;tique pour le centre de recherches de la Gait&eacute; Lyrique
+        
+
+
+<a href="almacen/2018_azorak_fr.html">
+        <img src="almacen/_previews/pre_HAZI.png" style="width: 280px;"></a>
+        
+        <a href="almacen/2018_gaite_fr.html">
+        <img src="almacen/_previews/pre_GAITE.png" style="width: 280px;"></a>
+    
+  

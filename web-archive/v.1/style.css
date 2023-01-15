@@ -1,0 +1,106 @@
+
+#image {
+    position:inherit;
+    top: 0px;
+}
+#texto {
+    position: absolute;
+    top: 525px;
+    left: 327px;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: 600; 
+}
+
+
+#ad {
+    position: absolute;
+    top: 505px;
+    left: 322px;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: 900; 
+    color: red;
+    text-decoration: underline;  
+}
+
+
+#koston:hover {
+    position: relative;
+    text-decoration: none;
+}
+#koston:hover:after {
+    content: url(sources/koston.png); /* no need for qoutes */
+    display: block;
+    position: fixed;
+    left: 657px; /* change this value to one that suits you */
+    top: 184px; /* change this value to one that suits you */
+}
+
+
+#oliveor:hover {
+    position: relative;
+    text-decoration: none;
+}
+#oliveor:hover:after {
+    content: url(sources/oliveor.png); /* no need for qoutes */
+    display: block;
+    position: fixed;
+    left: 657px; /* change this value to one that suits you */
+    top: 184px; /* change this value to one that suits you */
+}
+
+#circa:hover {
+    position: relative;
+    text-decoration: none;
+}
+#circa:hover:after {
+    content: url(sources/circa.png); /* no need for qoutes */
+    display: block;
+    position: fixed;
+    left: 657px; /* change this value to one that suits you */
+    top: 184px; /* change this value to one that suits you */
+}
+
+#tyler:hover {
+    position: relative;
+    text-decoration: none;
+}
+#tyler:hover:after {
+    content: url(sources/tyler.png); /* no need for qoutes */
+    display: block;
+    position: fixed;
+    left: 398px; /* change this value to one that suits you */
+    top: 267px; /* change this value to one that suits you */
+}
+
+#pepe:hover {
+    position: relative;
+    text-decoration: none;
+}
+#pepe:hover:after {
+    content: url(sources/pepe.png); /* no need for qoutes */
+    display: block;
+    position: fixed;
+    left: 330px; /* change this value to one that suits you */
+    top: 380px; /* change this value to one that suits you */
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+    text-decoration-line: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
+}
+
+a:visited  {
+    text-decoration: none;
+    color: black;
+    text-decoration-line: none;
+}
+

@@ -6,61 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary Meta Tags -->
-    <title>Pablo Moreno</title>
+    <title>waZZZup 2023</title>
     <meta name="title" content="Pablo Moreno">
     <meta name="description" content="Pablo Moreno is a young multidisciplinary graphic designer working between France and Spain.">
     <meta name="author" content="Pablo Moreno">
     <link rel="canonical" href="www.wazzzup.world">
 
-    <!-- Fav Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00a300">
-    <meta name="theme-color" content="#ffffff">
+
 
     <!-- Links -->
-    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/fonts.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/mobile.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/addons.css" />
+    <link type="text/css" rel="stylesheet" href="web-archive/assets/web-archive.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet"> 
-    
     <script defer data-domain="wazzzzup.world" src="https://plausible.io/js/plausible.js"></script>
 
   </head>
   <body>
 
-    <div class="content">
-      <div class="text">
-        <p>
-          I'm Pablo Moreno, a young multidisciplinary graphic designer, studying in France and working down to Bilbao.
-        </p>
-        <img src="assets/icon2.jpg" style="width: 100px; height: 100px;"></img>
+    <div class="screen-home">
+      <div class="time-counter"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+
+      <select class="archive-selector">
+        <option data-url="/web-archive/v.1/frame.html">v.1 · 2018</option>
+        <option data-url="/web-archive/v.2/frame.html">v.2 · 2019</option>
+        <option data-url="/web-archive/v.3/frame.html">v.3 · 2020</option>
+        <option data-url="/web-archive/v.4/frame.html">v.4 · 2020</option>
+        <option data-url="/web-archive/v.5/frame.html">v.5 · 2021</option>
+        <option data-url="/web-archive/v.6/frame.html">v.6 · 2022</option>
+        <option data-url="index.html">now · 2023</option>
+      </select>
+
       </div>
-      <div class="infos">
-        <a onclick="copyMail()" rel="me">E-mail</a>
-        <a href="https://read.cv/pablomoreno" >CV</a>
+
+      <div class="middle">
+      <div class="card">
+        <div class="card-text">
+          <p>
+            I'm Pablo Moreno, a young multidisciplinary graphic designer, studying in France and working down to Bilbao.
+          </p>
+          <img src="assets/me.jpg" style="width: 100px; height: 100px;"></img>
+        </div>
+        <div class="card-contact">
+          <a onclick="copyMail()" rel="me">E-mail</a>
+          <a href="https://read.cv/pablomoreno" >CV</a>
+        </div>
       </div>
+      <div id="mailcopied">email copied!</div>
     </div>
-    <div id="mailcopied">email copied!</div>
+  </div>
+<!-- 
+    <div class="screen-projects">
+      <div class="controls">
+        <div class="controls-filtre">
+          <span>Web</span>
+          <span>3D</span>
+          <span>Print</span>
+          <span>Stuff</span>
+        </div>
+        
+        <div class="controls-selecta">
+          <div class="filtre-selecta">
+            <span>Selecta mode</span>
+            <label class="switch">
+              <input type="checkbox" id="selectaMode">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+        <a href="" class="project selecta"><img src="projets/andrea-aguilera/andrea-aguilera.jpg"></a>
+        <a href="" class="project"><img src="projets/eugenio-moreno/eugenio-moreno.jpg"></a>
+        <a href="" class="project"><img src="projets/glace-sans-tain/glace-sans-tain.jpg"></a>
+        <a href="" class="project selecta"><img src="projets/juan-moreno/juan-moreno.jpg"></a>
+        <a href="" class="project"><img src="projets/vivir-sin-ti/vivir-sin-ti.jpg"></a>
+        <a href="" class="project"><img src="projets/copa-decantadora/copa-decantadora.png"></a>
+        <a href="" class="project"><img src="projets/voeux-2021/voeux-2021.jpg"></a>
+        <a href="" class="project"><img src="projets/edition-jardin/edition-jardin.jpg"></a>
+        <a href="" class="project"><img src="projets/jpo-2022/jpo-2022.png"></a>
+        <a href="" class="project"><img src="projets/matilde-esteban/matilde-esteban.jpg"></a>
+        <a href="" class="project selecta"><img src="projets/tribut-cafe/TRIBUT_CAFE_2.png"></a>
+        <a href="" class="project"><img src="projets/anthropocene/anthropocene.png"></a>
+        <a href="" class="project"><img src="projets/glace-sans-tain/IMG_2091.JPG"></a>
+        <a href="" class="project"><img src="projets/t-o-t-t/t-o-t-t.png"></a>
+        <a href="" class="project"><img src="projets/ketamina/POST_0000s_0000_Group-1.png"></a>
+      </div>
+    </div> -->
 
 
-    <div id="nightscreen">
-      <p id="sleep-icons">For ♻️ reasons this website is 💤<br> Visit it during the 🌞</p>
+  <div id="screen-night">
+    <p id="sleep-icons">For ♻️ reasons this website is 💤<br> Visit it during the 🌞</p>
   </div>
 
-    <div class="sleep">
-
-      <div class="time"><span id="minutes">00</span>:<span id="seconds">00</span></div>
-
-      <div class="cursor"></div>
-
-      <script id="script" src="assets/script.js"></script>
-    </div>
-
+  <div class="mobile-cursor"></div>
+  <script id="script" src="assets/js/script.js"></script>
+  <script id="script" src="web-archive/assets/web-archive.js"></script>
 
   </body>
 </html>
