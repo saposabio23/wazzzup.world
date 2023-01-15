@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "Aerobik";
+  src: url("fonts/Aerobik-Regular.woff2") format("woff2"),
+    url("fonts/Aerobik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: sans-serif;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  background: hsl(0, 0%, 97%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3vh 4vh;
+  margin-bottom: 90vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background: hsl(0, 0%, 97%);
+  border-radius: 0 0 20px 20px;
+  z-index: 3;
+}
+
+#wip {
+    float: left;
+    height: 4vmax;
+    margin-right: 20px;
+}
+
+.pmlogoturn {
+  animation: spin 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  font-size: 3vmax;
+  line-height: 1.4;
+  width: 60vw;
+  z-index: 4;
+  position: absolute;
+}
+
+.infos{
+  position: absolute;
+  bottom: 3vh;
+  font-size: 2vmax;
+  line-height: 1.5;
+}
+
+.infos > p {
+  display: inline;
+}
+
+#tabouret {
+  position: absolute;
+  max-height: 60vh;
+  max-width: 50vw;
+  right: 5vw;
+  bottom: 10vh;
+  z-index: 1;
+  height: 60vh;
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.projects {
+  width: 100vw;
+  height: 100vh;
+  padding: 3vh;
+  font-size: 2.5vmin;
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-end;
+  overflow-x: scroll;
+}
+
+
+/* -----------------------------------
+MAIL STUFF
+-------------------------------------- */
+
+#mailcopied{
+  /*! max-width: 90vw; */
+  height: auto;
+  position: fixed;
+  left: 50vw;
+  transform: translate(-50%, 110%);
+  bottom: 0vh;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background: hsl(0, 0%, 97%);
+  border-radius: 10px;
+  transition: all .5s ease-in-out;
+  font-size: 8vw;
+  padding: 1.5vh 1.5vh 1vh 1.5vh;
+  line-height: 1;
+  display: ruby;
+  z-index:999;
+}
+
+.mailappear{
+  bottom: 50vh !important;
+  transform: translate(-50%, 50%) !important;
+  transition: all .5s ease-in-out;
+}
+
+.mailexit{
+  bottom: 100vh !important;
+  transform: translate(-50%, -100%) !important;
+  transition: all .5s ease-in-out;
+}
+
+.mailreset{
+  display: none !important;
+  transform: translate(-50%, 110%);
+  bottom: 0vh;
+  transition: all .5s ease-in-out;
+}
+
+/* -----------------------------------
+WORKS LIST
+-------------------------------------- */
+
+
+.work-list > a  {
+  display: grid;
+  grid-template-columns: auto 10vw 30vw;
+  gap: 10px;
+  overflow-x: hidden;
+  border-bottom: 1px solid black;
+  padding: 0px;
+  width: calc(100vw - 6vh);
+  align-items: center;
+  padding: 10px 0;
+}
+
+.work-list > a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.work-list > a > span:nth-child(1)  {
+  text-align: left;
+
+}
+
+.work-list > a > span:nth-child(2) {
+  text-align: center;
+
+}
+
+.work-list > a > span:nth-child(3) {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 650px) {
+  .content {
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
+    margin-bottom: calc(var(--vh, 1vh) * 85);
+  }
+
+  .text {
+    width: calc(90vw - 8vmin);
+    font-size: 4vmax;
+  }
+
+  .infos > p {
+    display: block;
+    font-size: 3vmax;
+  }
+
+  .projects {
+    font-size: 3vmax;
+  }
+
+  #tabouret {
+    width: 50vw;
+    height: auto;
+    bottom: 17vh;
+  }
+
+  .work-list > a  {
+    font-size: 2.5vmax;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .work-list > a > span:nth-child(1)  {
+    text-align: left;
+  }
+
+  .work-list > a > span:nth-child(2) {
+    display: none;
+  }
+
+  .work-list > a > span:nth-child(3) {
+    text-align: right;
+  }
+
+}
