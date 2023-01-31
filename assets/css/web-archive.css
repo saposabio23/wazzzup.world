@@ -1,16 +1,21 @@
 /* -----------------------------------
   WEB ARCHIVE
 -------------------------------------- */
-.archive-selector {
+.year-selector{
   position: fixed;
   bottom: 20px;
   left: 20px;
-  box-shadow: 0px 0px 20px -2px hsla(0, 0%, 0%, 0.2);
+  background-color: snow;
   padding: 6px 12px;
-  border: 1px solid #cbd1d8;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.archive-selector {
+  border: none;
   transition: all .2s ease-in-out;
-  border-radius: 7px;
-  background-color: hsl(0, 0%, 97%);
+  background-color: transparent;
 }
 
 /*IE*/

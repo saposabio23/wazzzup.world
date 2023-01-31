@@ -1,8 +1,16 @@
 :root{
-  --border-rad: 20px;
+  --spacing-l: 30px;
   --spacing-m: 25px;
   --spacing-s: 17px;
 
+  --background: snow;
+  --projectsBack: tan;
+
+  --radius-img: 7px;
+  --border-rad: 20px;
+
+  --thisColor: dimgray;
+  --flash: greenyellow;
 }
 
 html,
@@ -15,26 +23,30 @@ p {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: 'Nunito';
+  font-family: 'rubikregular';
+  /* font-family: 'BBBOS'; */
 
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
 }
 
-/* 
+iframe {
+  border-radius: var(--radius-img);
+  
+}
+
 body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 html {
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
-  background: hsl(0, 0%, 97%);
+  background: var(--background);
   height: 100%;
   width: 100%;
-  font-size: 1.5rem;
   line-height: 1.4;
   overflow: scroll;
-
+  overflow-x: hidden;
   /* cursor: url(../pointer/blue.cur), pointer; */
 }
 
@@ -59,8 +71,12 @@ SCREEN HOME
 .screen-home{
   height: 100vh;
   width: 100vw;
-  padding: 20px;
   z-index: 1;
+  background-color: var(--thisColor);
+}
+
+.blockColor{
+  background: var(--flash)!important;
 }
 
 .middle{
@@ -69,6 +85,8 @@ SCREEN HOME
   transform: translate(-50%, -50%);
   display: grid;
   justify-items: center;
+  font-size: 1.3rem;
+
 }
 /* -----------------------------------
 CARD STUFF
@@ -76,7 +94,7 @@ CARD STUFF
 .card {
   width: 500px;
   box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
-  background: hsl(0, 0%, 97%);
+  background: var(--background);
   border-radius: var(--border-rad);
   position: relative;
   z-index: 2;
@@ -84,6 +102,7 @@ CARD STUFF
 
 .card-text{
   display: flex;
+  font-size: 1.3rem;
 }
 
 .card-text p{
@@ -108,7 +127,7 @@ CARD STUFF
 }
 
 .card-contact > a{
-  background: hsl(0, 0%, 97%);
+  background: var(--background);
   border-radius: var(--border-rad);
   padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-s);
 }
@@ -125,7 +144,7 @@ CARD STUFF
 .card-contact > a:nth-child(1):hover, .card-contact > a:nth-child(1):active {
   background: dodgerblue;
   text-decoration: none;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .card-contact > a:nth-child(2):hover, .card-contact > a:nth-child(2):active  {
@@ -139,17 +158,13 @@ CARD STUFF
 SCREEN PROJECTS
 -------------------------------------- */
 .screen-projects{
-  border-top: 1px solid black;
+  border-top: 1px solid var(--thisColor);
 
-  background-color: slategrey;
+  background-color: var(--thisColor);
   z-index: 2;
   position: relative;
   transition: all .3s ease-in-out;
-}
-
-.selecta-bk {
-  background-color: red !important;
-  transition: all .3s ease-in-out;
+  border-radius: var(--border-rad) var(--border-rad) 0 0;
 }
 
 .projects{
@@ -158,25 +173,29 @@ SCREEN PROJECTS
   z-index: 3;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-gap: 1px;
   z-index: 1;
 }
 
 .projects a {
   height: auto;
-  aspect-ratio: 4/3;
   box-sizing: border-box;
+  min-width: 100%;
 
   display: grid;
   align-items: center;
   justify-self: center;
-  padding: 50px;
-  /*! background-color: indigo; */
+  padding: 40px;
+  background-color: var(--projectsBack);
+  /* border-radius: 15px; */
 
   opacity: 1;
   visibility: visible;
   transition: opacity .3s ease-in-out, display 1s ease-in-out;
+
+  transition: all .3s ease-in-out;
+
 }
 
 .projects img{
@@ -192,42 +211,121 @@ SCREEN PROJECTS
   display: none !important;
 }
 
+.projectThumb {
+  border-radius: 0;
+  transition: all .3s ease-in-out;
+}
+
+.projectThumb:hover {
+  border-radius: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.buttonsFilter{
+  border: 1px solid var(--thisColor);
+  padding: 4px 12px;
+  border-radius: var(--border-rad);
+  transition: all .3s ease-in-out;
+}
+
+.buttonsFilter:hover {
+  cursor: pointer;
+}
+
+
+#buttonWeb:hover, .highlightWeb {
+  background-color: lightskyblue !important;
+  transition: all .3s ease-in-out;
+}
+
+#buttonThreed:hover, .highlightThreed {
+  background-color: tomato !important;
+  transition: all .3s ease-in-out;
+}
+
+#buttonStuff:hover, .highlightStuff {
+  background-color: orange !important;
+  transition: all .3s ease-in-out;
+}
+
+#buttonPrint:hover, .highlightPrint {
+  background-color: yellowgreen !important;
+  transition: all .3s ease-in-out;
+}
+
+
 
 /* -----------------------------------
-CONTROLS
+PROJETS SHOW
 -------------------------------------- */
-.controls {
-  height: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  font-size: 0.7rem;
-  /*! background-color: indigo; */
-  color: snow;
-  position: sticky;
+
+.projectshow{
+  background-color: var(--thisColor);
+  margin: 0;
+  padding: var(--spacing-m);
   top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 2;
+  font-size: 1.3rem;
+  justify-items: center;
 }
 
-.controls > div > div > span {
-  margin-right: 8px;
+.projectshow p {
+  margin: 0 0 var(--spacing-l) 0;
+  max-width: 700px;
+  color: var(--background);
 }
 
-.controls div {
-  display: flex;
-  align-items: center;
+.projectshow img, video, .videoVim {
+  max-width: 100%;
+  color: var(--background);
+  border-radius: var(--radius-img);
+  display: block;
+  margin: 0 auto var(--spacing-m) auto;
+  height: auto;
+  max-height: 80vh;
 }
 
-.controls-filtre {
-  display: flex;
-  column-gap: 20px;
+
+h1{
+  color: var(--background);
+  padding: 0;
+  margin: var(--spacing-s) 0 var(--spacing-s) 0;
 }
 
-.controls-selecta {
 
+.col img{
+  width: 100%;
+  max-height: 80vh;
 }
 
+.col2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--spacing-m);
+  position: relative;
+  justify-items: center;
+}
+
+.col3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--spacing-m);
+  max-width: 100%;
+  position: relative;
+  justify-items: center;
+}
+
+.col4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--spacing-m);
+  max-width: 100%;
+  position: relative;
+  justify-items: center;
+}

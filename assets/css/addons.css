@@ -1,27 +1,4 @@
 /* -----------------------------------
-CURSOR
--------------------------------------- */
-.cursor {
-    display: none;
-}
-
-
-/* -----------------------------------
-TIME COUNTER
--------------------------------------- */
-.time-counter{
-  padding: var(--spacing-s) var(--spacing-s) 12px var(--spacing-s);
-  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
-  background: hsl(0, 0%, 97%);
-  border-radius: var(--border-rad);
-  line-height: 1;
-  font-size: 0.9rem;
-  float: left;
-  position: fixed;
-}
-
-
-/* -----------------------------------
 SCREEN NIGHT
 -------------------------------------- */
 #screen-night{
@@ -71,6 +48,43 @@ MAIL STUFF
   transition: all .5s ease-in-out;
 }
 
+
+/* -----------------------------------
+CONTROLS
+-------------------------------------- */
+.controls {
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  color: var(--thisColor);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--projectsBack);
+  border-bottom: 1px solid var(--thisColor);
+  border-radius: var(--border-rad) var(--border-rad) 0 0;
+}
+
+.controls > div > div > span {
+  margin-right: 8px;
+}
+
+.controls div {
+  display: flex;
+  align-items: center;
+}
+
+.controls-filtre {
+  display: flex;
+  column-gap: 20px;
+  color: var(--thisColor);
+}
+
 /* -----------------------------------
 SWITCHER
 -------------------------------------- */
@@ -95,7 +109,7 @@ SWITCHER
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--thisColor);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -107,17 +121,13 @@ SWITCHER
   width: 18px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: var(--projectsBack);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  background-color: var(--flash);
 }
 
 input:checked + .slider:before {

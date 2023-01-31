@@ -1,0 +1,3 @@
+
+- add text to projects
+-selector on top right filter

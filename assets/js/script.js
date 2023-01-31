@@ -1,4 +1,21 @@
-window.onload = isItNight();
+// window.onload = isItNight()
+
+/* -----------------------------------
+CSS COLOOOORS
+// -------------------------------------- */
+function witchColor() {
+  var randomColor = [ 'Aqua', 'Aquamarine', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'Darkorange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HotPink', 'IndianRed', 'Indigo', 'Khaki', 'Lavender', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'Lime', 'LimeGreen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'RebeccaPurple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'Yellow', 'YellowGreen'][Math.floor(Math.random() * 127)]
+
+
+  console.log(randomColor);
+  var newColor=":root{--thisColor: " + randomColor + ";}"
+
+  var styleSheet = document.createElement("style")
+  styleSheet.innerText = newColor
+  document.head.appendChild(styleSheet)
+}
+
+// witchColor()
 
 /* -----------------------------------
 IPHONE HEIGHT
@@ -29,34 +46,6 @@ function copyMail() {
 }
 
 
-/* -----------------------------------
-FEEDBACK MOBILE
--------------------------------------- */
-function touch() {
-  document.addEventListener("mousemove", event => {
-    document.getElementsByClassName("mobile-cursor")[0].style.transform = "translate(" + event.pageX + "px, " + event.pageY + "px)";
-  })
-
-  document.addEventListener("click", event => {
-    document.getElementsByClassName("mobile-cursor")[0].classList.add("click")
-    setTimeout(() => {
-      document.getElementsByClassName("mobile-cursor")[0].classList.remove("click")
-    }, 330)
-  })
-}
-
-// /* -----------------------------------
-// TIMER
-// -------------------------------------- */
-    function timer() {var second = 0;
-      function pad ( value ) { return value > 9 ? value : "0" + value; }
-      setInterval( function(){
-          document.getElementById("seconds").innerHTML=pad(++second%60);
-          document.getElementById("minutes").innerHTML=pad(parseInt(second/60,10));
-      }, 1000);
-    }
-
-
 // /* -----------------------------------
 // SLEEP WEB
 // -------------------------------------- */
@@ -70,8 +59,6 @@ function isItNight() {
         offAtNight()
     }
     if ((hr == 7) || (hr == 8) || (hr == 9) || (hr == 10) || (hr == 11) || (hr == 12) || (hr == 13) || (hr == 14) || (hr == 15) || (hr == 16) || (hr == 17) || (hr == 18) || (hr == 19) || (hr == 20) || (hr == 21) || (hr == 22) || (hr == 23)){
-      timer()
-      touch()
     }
   }
 
@@ -80,11 +67,12 @@ function isItNight() {
     document.querySelector('.screen-projects').remove();
    }
 
+
 // /* -----------------------------------
-// CHECKBOXES
+// SHOW SELECTA
 // -------------------------------------- */
-   document.addEventListener('DOMContentLoaded', function () {
-    var checkbox = document.querySelector('#selectaMode');    
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.querySelector('#selectaMode');    
     checkbox.addEventListener('change', function () {
       if (checkbox.checked) {
         console.log('Selecta styla');
@@ -98,62 +86,72 @@ function isItNight() {
     });
   });
 
-
-// /* -----------------------------------
-// SHOW SELECTA
-// -------------------------------------- */
-
-
 $selecta = document.querySelectorAll(".selecta");
-$project = document.querySelectorAll(".project");
+$projectThumb = document.querySelectorAll(".projectThumb");
 $screenProjects = document.querySelector(".screen-projects");
+$projectsControls = document.querySelector(".controls");
 
 function showSelecta() {
-  for(let i = 0, max = $project.length; i < max; i++)
-  if (!$project[i].classList.contains("selecta")){
-    $project[i].classList.add("projects-hide");
-    $screenProjects.classList.add("selecta-bk");
+  for(let i = 0, max = $projectThumb.length; i < max; i++)
+  if (!$projectThumb[i].classList.contains("selecta")){
+    $projectThumb[i].classList.add("projects-hide");
     
   }
 }
 
 function showAll() {
-  for(let i = 0, max = $project.length; i < max; i++)
-  if ($project[i].classList.contains("projects-hide")){
-    $project[i].classList.remove("projects-hide");
+  for(let i = 0, max = $projectThumb.length; i < max; i++)
+  if ($projectThumb[i].classList.contains("projects-hide")){
+    $projectThumb[i].classList.remove("projects-hide");
     $screenProjects.classList.remove("selecta-bk");
   }
 }
 
 
-  // function showGraphic() {
-  //   if ($mgraphic.classList.contains("off")){
-  //     var index0 = 0, length = $xgraphic.length;
-  //       for ( ; index0 < length; index0++) {
-  //             $xgraphic[index0].classList.remove("hide");}
-  //     var index1 = 0, length = $xweb.length;
-  //       for ( ; index1 < length; index1++) {
-  //             $xweb[index1].classList.add("hide");}
-  //     var index2 = 0, length = $xstuff.length;
-  //       for ( ; index2 < length; index2++) {
-  //             $xstuff[index2].classList.add("hide");}
-  //     $mgraphic.classList.replace("off", "on");
-  //     $mweb.classList.replace("on", "off");
-  //     $mstuff.classList.replace("on", "off");
-  //   }
-  //   else($mgraphic.classList.contains("on")){
-  //     var index0 = 0, length = $xgraphic.length;
-  //       for ( ; index0 < length; index0++) {
-  //             $xgraphic[index0].classList.remove("hide");}
-  //     var index1 = 0, length = $xweb.length;
-  //       for ( ; index1 < length; index1++) {
-  //             $xweb[index1].classList.remove("hide");}
-  //     var index2 = 0, length = $xstuff.length;
-  //       for ( ; index2 < length; index2++) {
-  //             $xstuff[index2].classList.remove("hide");}
-  //     $mgraphic.classList.replace("on", "off");
-  //     $mweb.classList.replace("on", "off");
-  //     $mstuff.classList.replace("on", "off");
-  //   }
-  // }
 
+
+// /* -----------------------------------
+// FILTER SELECTOR
+// -------------------------------------- */
+$buttonWeb = document.getElementById("buttonWeb");
+$buttonThreed = document.getElementById("buttonThreed");
+$buttonPrint = document.getElementById("buttonPrint");
+$buttonStuff = document.getElementById("buttonStuff");
+
+$projectsWeb = document.querySelectorAll(".web");
+$projectsThreed = document.querySelectorAll(".threed");
+$projectsPrint = document.querySelectorAll(".print");
+$projectsStuff = document.querySelectorAll(".stuff");
+
+function highlightWeb() {
+  for(let i = 0, max = $projectsWeb.length; i < max; i++){
+    $projectsWeb[i].classList.toggle("highlightWeb");
+    $buttonWeb.classList.toggle("highlightWeb");
+  }
+}
+$buttonWeb.addEventListener('click', highlightWeb);
+
+function highlightThreed() {
+  for(let i = 0, max = $projectsThreed.length; i < max; i++){
+    $projectsThreed[i].classList.toggle("highlightThreed");
+    $buttonThreed.classList.toggle("highlightThreed");
+  }
+}
+$buttonThreed.addEventListener('click', highlightThreed);
+
+function highlightStuff() {
+  for(let i = 0, max = $projectsStuff.length; i < max; i++){
+    $projectsStuff[i].classList.toggle("highlightStuff");
+    $buttonStuff.classList.toggle("highlightStuff");
+  }
+}
+$buttonStuff.addEventListener('click', highlightStuff);
+
+
+function highlightPrint() {
+  for(let i = 0, max = $projectsPrint.length; i < max; i++){
+    $projectsPrint[i].classList.toggle("highlightPrint");
+    $buttonPrint.classList.toggle("highlightPrint");
+  }
+}
+$buttonPrint.addEventListener('click', highlightPrint);
