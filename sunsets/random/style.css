@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars */
+  display: flex;
+  text-align: center;
+  font-family: 'rubikregular';
+}
+
+#sky {
+  position: fixed;
+  width: 100vw;
+  height: 60vh;
+  background-color: rgb(63, 230, 56);
+  z-index: 1;
+  transition: all 1s ease-in-out;
+}
+
+#sun {
+  position: fixed;
+  top: 45vh;
+  left: calc(50vw - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(207, 35, 82);
+  z-index: 2;
+  transition: all .3s ease-in-out;
+}
+
+#sea {
+  position: fixed;
+  top: 60vh;
+  width: 100vw;
+  height: 40vh;
+  background-color: rgb(24, 28, 116);
+  z-index: 3;
+  transition: all .6s ease-in-out;
+}
+
+textarea{
+  width: 100%;
+  background-color: transparent !important;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.menu{
+  position: absolute;
+  bottom: 20px;
+  z-index: 5;
+  left: 50vw;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: black;
+  padding: 8px;
+  border-radius: 5px;
+  width: 30vw;
+}

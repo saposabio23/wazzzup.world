@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'rubikbold';
+    src: url('fonts/rubik-bold-webfont.woff2') format('woff2'),
+         url('fonts/rubik-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rubikbold_italic';
+    src: url('fonts/rubik-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/rubik-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rubikregular';
+    src: url('fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rubikitalic';
+    src: url('fonts/rubik-italic-webfont.woff2') format('woff2'),
+         url('fonts/rubik-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'rubiklight';
+    src: url('fonts/rubik-light-webfont.woff2') format('woff2'),
+         url('fonts/rubik-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rubiklight_italic';
+    src: url('fonts/rubik-lightitalic-webfont.woff2') format('woff2'),
+         url('fonts/rubik-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: darkkhaki;
+  }
+  
+  #txt{
+    margin-top: 10px;
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    place-content: center;
+  }
+  
+  #info {
+    position: relative;
+    height: fit-content;
+    color: black;
+    top: 107%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  #lh{
+    display: flex;
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    top: 15vh;
+    left: 15vw;
+  }
+  
+  .frame{
+    position: absolute;
+    background-color: transparent;
+    border: ridge 10px brown;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    box-sizing: border-box;
+  }
+  #lhSky {
+    position: absolute;
+    background-color: pink;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    z-index: 0;
+    box-sizing: border-box;
+  }
+  #lhSun {
+    position: absolute;
+    border-radius: 50%;
+    background-color: yellow;
+    width: 5vh;
+    height: 5vh;
+    left: calc(50% - 2.5vh);
+    top: 45%;
+    z-index: 1;
+  }
+  #lhSea {
+    position: absolute;
+    background-color: mediumblue;
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    z-index: 2;
+  }
+  #lhWaves {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 2;
+    border-bottom: .5vh solid yellow;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 3vw;
+  }
+  #lhWaves1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .8vh solid yellow;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 6vw;
+  }
+  
+  
+  #cu{
+    display: flex;
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    top: 15vh;
+    right: 15vw;
+  }
+
+  #cuSky {
+    position: absolute;
+    background-color: olivedrab;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    z-index: 0;
+  }
+  #cuSun {
+    position: absolute;
+    border-radius: 50%;
+    background-color: tomato;
+    width: 5vh;
+    height: 5vh;
+    left: calc(50% - 2.5vh);
+    top: 45%;
+    z-index: 1;
+  }
+  #cuSea {
+    position: absolute;
+    background-color: lightslategray;
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    z-index: 2;
+  }
+  #cuWaves {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .5vh solid tomato;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 3vw;
+  }
+  #cuWaves1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .8vh solid tomato;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 6vw;
+  }
+  
+  
+  #sf{
+    display: flex;
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    bottom: 15vh;
+    left: 15vw;
+  }
+
+  #sfSky {
+    position: absolute;
+    background-color: coral;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    z-index: 0;
+  }
+  #sfSun {
+    position: absolute;
+    border-radius: 50%;
+    background-color: royalblue;
+    width: 5vh;
+    height: 5vh;
+    left: calc(50% - 2.5vh);
+    top: 45%;
+    z-index: 1;
+  }
+  #sfSea {
+    position: absolute;
+    background-color: burlywood;
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    z-index: 2;
+  }
+  #sfWaves {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .5vh solid royalblue;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 3vw;
+  }
+  #sfWaves1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .8vh solid royalblue;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 6vw;
+  }
+  
+  #hk{
+    display: flex;
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    bottom: 15vh;
+    right: 15vw;
+  }
+
+  #hkSky {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    z-index: 0;
+  }
+  #hkSun {
+    position: absolute;
+    border-radius: 50%;
+    background-color: gold;
+    width: 5vh;
+    height: 5vh;
+    left: calc(50% - 2.5vh);
+    top: 45%;
+    z-index: 1;
+  }
+  #hkSea {
+    position: absolute;
+    background-color: mediumslateblue;
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    z-index: 2;
+  }
+  #hkWaves {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .5vh solid gold;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 3vw;
+  }
+  #hkWaves1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-bottom: .8vh solid gold;
+    border-right: 1vh solid transparent;
+    border-left: 1vh solid transparent;
+    height: 0;
+    width: 6vw;
+  }
+  

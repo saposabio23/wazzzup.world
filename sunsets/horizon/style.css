@@ -1,0 +1,62 @@
+
+
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+    html{
+      scrollbar-width: none;
+    }
+  }
+  body {
+    margin: 0; /* remove default margin */
+    scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+    -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+    overflow-y: scroll;
+      height: 99999px;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+  }
+  
+  
+  #sky {
+    position: fixed;
+    width: 100vw;
+    height: 75vh;
+    background: linear-gradient(hsl(240, 100%, 0%) 0%, hsl(240, 100%, 50%) 100%);
+    z-index: 1;
+  }
+  
+  #sun {
+    position: fixed;
+    top: 25vh;
+    left: calc(50vw - 100px);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: orange;
+    z-index: 2;
+    transition: top 0.5s ease-in-out;
+  }
+  
+  #sea {
+    position: fixed;
+    top: 75vh;
+    width: 100vw;
+    height: 240vh;
+    background-color: yellow;
+    z-index: 3;
+  }
+  
+  #cloud {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 200px;
+    height: 100px;
+    border: solid black 1px;
+    border-radius: 50%;
+    background-color: CornflowerBlue;
+    z-index: 99;
+    display: none;
+  }
+  
