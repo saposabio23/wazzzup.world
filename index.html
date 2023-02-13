@@ -1,126 +1,113 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+ + +</title>
 
-    <!-- Primary Meta Tags -->
-    <title>· PM23 ·</title>
-    <meta name="title" content="Pablo Moreno">
-    <meta name="description" content="Pablo Moreno is a young multidisciplinary graphic designer working between France and Spain.">
-    <meta name="author" content="Pablo Moreno">
-    <link rel="canonical" href="https://wazzzup.world">
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            transition: all .5s ease-in-out;
+        }
+    
+        p {
+            margin: auto;
+            font-size: 2rem;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+            text-align: center;
+            line-height: 200%;
+        }
+    
+        span {
+            border: 1px solid black;
+            padding: 2px 6px 4px 6px;
+            border-radius: 6px;
+        }
+    
+        span:hover {
+            cursor: pointer;
+        }
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+        .on {
+            border: 1px solid black;
+            background-color: greenyellow;
+            color: black;
+        }
 
-    <!-- Links -->
-    <link type="text/css" rel="stylesheet" href="assets/css/fonts.css" />
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
-    <link type="text/css" rel="stylesheet" href="assets/css/mobile.css" />
-    <link type="text/css" rel="stylesheet" href="assets/css/addons.css" />
-    <link type="text/css" rel="stylesheet" href="pages/web-archive/assets/web-archive.css" />
+        .gone {
+            opacity: 0;
+            transition: all 1s ease-in-out;
+        }
+    
+    </style>
 
     <script data-goatcounter="https://wazzzup.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-  </head>
-  <body>
+
+</head>
+<body>
     
-    <div class="screen-home blockColor">
-      <div class="year-selector">
-        See this website in 
-        <select class="archive-selector">
-          <option data-url="index.html">2023</option>
-          <option data-url="pages/web-archive/v6/frame.html">2022</option>
-          <option data-url="pages/web-archive/v5/frame.html">2021</option>
-          <option data-url="pages/web-archive/v4/frame.html">2020</option>
-          <option data-url="pages/web-archive/v3/frame.html">2020</option>
-          <option data-url="pages/web-archive/v2/frame.html">2019</option>
-          <option data-url="pages/web-archive/v1/frame.html">2018</option>
-        </select>
-      </div>
+    <p>giving my <span id="energy" onclick="energyOk()">energy</span> on <span id="pablo" onclick="pabloOk()">pablo</span> !</p>
+    
+    <script>
 
-      <div class="middle">
-      <div class="card">
-        <div class="card-text">
-          <p>
-            I'm Pablo Moreno, a young multidisciplinary graphic designer, studying in France and working down to Bilbao.
-          </p>
-          <img src="assets/me.jpg" style="width: 100px; height: 100px;"></img>
-        </div>
-         <div class="card-contact">
-           <a onclick="copyMail()" rel="me">E-mail</a>
-           <a href="https://read.cv/pablomoreno" >CV</a>
-          </div>
-        </div>
-        <div id="mailcopied">email copied!</div>
-      </div>
-    </div>
+    $pablo = document.querySelector("#pablo");
+    $energy = document.querySelector("#energy");
+    $p = document.querySelector("p");
 
-    <!-- <div class="screen-projects" id="screen-projects">
-      <div class="controls">
-        <div class="controls-filtre">
-          <a class="buttonsFilter" id="buttonWeb">Web</a>
-          <a class="buttonsFilter" id="buttonThreed">3D</a>
-          <a class="buttonsFilter" id="buttonPrint">Print</a>
-          <a class="buttonsFilter" id="buttonStuff">Stuff</a>
-        </div>
+    function goToEnergy() {
+        if ($pablo.classList.contains("on") && $energy.classList.contains("on")){
+            $p.classList.add("gone");
+            document.body.style.backgroundColor = ("greenyellow");
+            setTimeout(() => {
+                window.location.href = "https://pablo.energy";
+            }, "1500")
+        }
+
+        else{}
+    }
+
+    function energyOk() {
+        if (!$energy.classList.contains("on")){
+            $energy.classList.add("on");
+            goToEnergy();
+        }
+
+        else if ($energy.classList.contains("on")){
+            $energy.classList.remove("on");
+        }
         
-        <div class="controls-selecta">
-          <div class="filtre-selecta">
-            <span>Selecta mode</span>
-            <label class="switch">
-              <input type="checkbox" id="selectaMode">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-      </div>
+        else{  
+            
+        }
+    }
 
-      <div class="projects">
-        <a href="files/affiche-freud.html" class="projectThumb print"><img src="projets/affiche-freud/t_affiche-freud.JPG"></a>
-        <a href="files/andrea-aguilera.html" class="projectThumb selecta web"><img src="projets/andrea-aguilera/t_andrea-aguilera.JPG"></a>
-        <a href="files/anthropocene.html" class="projectThumb threed"><img src="projets/anthropocene/t_anthropocene.png"></a>
-        <a href="files/autre-temps.html" class="projectThumb web"><img src="projets/autre-temps/t_autre-temps.png"></a>
-        <a href="files/borges-estienne.html" class="projectThumb print"><img src="projets/borges-estienne/t_borges-estienne.jpg"></a>
-        <a href="files/cimetiere-graville.html" class="projectThumb print"><img src="projets/cimetiere-graville/t_cimetiere-graville.jpg"></a>
-        <a href="files/copa-decantadora.html" class="projectThumb selecta threed"><img src="projets/copa-decantadora/t_copa-decantadora.png"></a>
-        <a href="files/dissuation-nucleaire.html" class="projectThumb print"><img src="projets/dissuation-nucleaire/t_dissuation-nucleaire.png"></a>
-        <a href="files/doom-day.html" class="projectThumb print"><img src="projets/doom-day/t_doom-day.jpg"></a>
-        <a href="files/edition-jardin.html" class="projectThumb stuff"><img src="projets/edition-jardin/t_edition-jardin.jpg"></a>
-        <a href="files/esadhar-books.html" class="projectThumb print"><img src="projets/esadhar-books/t_esadhar-books.jpg"></a>
-        <a href="files/eugenio-moreno.html" class="projectThumb web"><img src="projets/eugenio-moreno/t_eugenio-moreno.jpg"></a>
-        <a href="files/festival-ombre.html" class="projectThumb print"><img src="projets/festival-ombre/t_festival-ombre.jpg"></a>
-        <a href="files/glace-sans-tain.html" class="projectThumb web"><img src="projets/glace-sans-tain/t_glace-sans-tain.webp"></a>
-        <a href="files/jpo-julie.html" class="projectThumb selecta threed"><img src="projets/jpo-julie/1_jpo-julie.png"></a>
-        <a href="files/juan-moreno.html" class="projectThumb web"><img src="projets/juan-moreno/t_juan-moreno.jpg"></a>
-        <a href="files/k&p.html" class="projectThumb web"><img src="projets/k&p/t_k&p.png"></a>
-        <a href="files/ketamina.html" class="projectThumb stuff"><img src="projets/ketamina/t_ketamina.png"></a>
-        <a href="files/matilde-esteban.html" class="projectThumb web"><img src="projets/matilde-esteban/t_matilde-esteban.jpg"></a>
-        <a href="files/more-things.html" class="projectThumb stuff"><img src="projets/more-things/t_more-things.webp"></a>
-        <a href="files/paysages-vagues.html" class="projectThumb stuff"><img src="projets/paysages-vagues/t_paysages-vagues.JPG"></a>
-        <a href="files/picasoft.html" class="projectThumb web"><img src="projets/picasoft/1_picasoft.png"></a>
-        <a href="files/souvenirs-abrupts.html" class="projectThumb stuff"><img src="projets/souvenirs-abrupts/t_souvenirs-abrupts.jpg"></a>
-        <a href="files/t-o-t-t.html" class="projectThumb web"><img src="projets/t-o-t-t/t_t-o-t-t.png"></a>
-        <a href="files/tramway.html" class="projectThumb stuff"><img src="projets/tramway/t_tramway.jpg"></a>
-        <a href="files/tribut-cafe.html" class="projectThumb threed"><img src="projets/tribut-cafe/t_tribut-cafe.png"></a>
-        <a href="files/vivir-sin-ti.html" class="projectThumb selecta web "><img src="projets/vivir-sin-ti/t_vivir-sin-ti.jpg"></a>
-        <a href="files/voeux-2021.html" class="projectThumb selecta web"><img src="projets/voeux-2021/t_voeux-2021.jpg"></a>
-      </div>
-    </div> -->
+    function pabloOk() {
+        if (!$pablo.classList.contains("on")){
+            $pablo.classList.add("on");
+            goToEnergy();
+        }
 
-  <div id="screen-night">
-    <p id="sleep-icons">For ♻️ reasons this website is 💤<br>Come during the 🌞!</p>
-  </div>
+        else if ($pablo.classList.contains("on")){
+            $pablo.classList.remove("on");
+        }
 
-  <script id="script" src="assets/js/script.js"></script>
-  <script id="script" src="pages/web-archive/assets/web-archive.js"></script>
+        else{}
+    }
 
-  </body>
+
+
+
+    </script>
+</body>
 </html>
