@@ -64,7 +64,8 @@
     <p>giving my <span id="energy" onclick="energyOk()">energy</span> on <span id="pablo" onclick="pabloOk()">pablo</span> !</p>
     
     <audio id="button" src="button.mp3" preload="auto"></audio>
-    <audio id="leaf" src="leaf.mp3" preload="auto"></audio>
+    <audio id="out" src="out.mp3" preload="auto"></audio>
+    <audio id="magic" src="magic.mp3" preload="auto"></audio>
 
 
     <script>
@@ -76,7 +77,7 @@
         if ($pablo.classList.contains("on") && $energy.classList.contains("on")){
             $p.classList.add("gone");
             document.body.style.backgroundColor = ("greenyellow");
-            playLeaf();
+            playMagic();
             setTimeout(() => {
                 window.location.href = "https://pablo.energy";
             }, "1000")
@@ -94,7 +95,7 @@
 
         else if ($energy.classList.contains("on")){
             $energy.classList.remove("on");
-
+            playOut();
         }
         
         else{  
@@ -111,6 +112,7 @@
 
         else if ($pablo.classList.contains("on")){
             $pablo.classList.remove("on");
+            playOut();
         }
 
         else{}
@@ -121,8 +123,12 @@
         button.play();
     };
 
-    function playLeaf() {
-        leaf.play();
+    function playOut() {
+        out.play();
+    };
+
+    function playMagic() {
+        magic.play();
     };
 
     // $pablo.addEventListener('click', playButton, false);
