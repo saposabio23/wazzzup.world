@@ -63,8 +63,11 @@
     
     <p>giving my <span id="energy" onclick="energyOk()">energy</span> on <span id="pablo" onclick="pabloOk()">pablo</span> !</p>
     
-    <script>
+    <audio id="button" src="button.mp3" preload="auto"></audio>
+    <audio id="leaf" src="leaf.mp3" preload="auto"></audio>
 
+
+    <script>
     $pablo = document.querySelector("#pablo");
     $energy = document.querySelector("#energy");
     $p = document.querySelector("p");
@@ -73,6 +76,7 @@
         if ($pablo.classList.contains("on") && $energy.classList.contains("on")){
             $p.classList.add("gone");
             document.body.style.backgroundColor = ("greenyellow");
+            playLeaf();
             setTimeout(() => {
                 window.location.href = "https://pablo.energy";
             }, "1000")
@@ -84,11 +88,13 @@
     function energyOk() {
         if (!$energy.classList.contains("on")){
             $energy.classList.add("on");
+            playButton();
             goToEnergy();
         }
 
         else if ($energy.classList.contains("on")){
             $energy.classList.remove("on");
+
         }
         
         else{  
@@ -99,6 +105,7 @@
     function pabloOk() {
         if (!$pablo.classList.contains("on")){
             $pablo.classList.add("on");
+            playButton();
             goToEnergy();
         }
 
@@ -110,7 +117,16 @@
     }
 
 
+    function playButton() {
+        button.play();
+    };
 
+    function playLeaf() {
+        leaf.play();
+    };
+
+    // $pablo.addEventListener('click', playButton, false);
+    // $energy.addEventListener('click', playButton, false);
 
     </script>
 </body>
