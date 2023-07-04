@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,18 @@
     <title>+ + +</title>
 
     <style>
-        body{
+        body {
             width: 100vw;
-            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 0;
             transition: all .5s ease-in-out;
         }
-    
+
         p {
             margin: auto;
             font-size: 2rem;
@@ -27,7 +28,7 @@
             text-align: center;
             line-height: 200%;
         }
-    
+
         span {
             border: 1px solid black;
             padding: 0px 6px 4px 6px;
@@ -35,7 +36,7 @@
             box-shadow: 6px 6px black;
             transition: all .5s ease-in-out;
         }
-    
+
         span:hover {
             cursor: pointer;
         }
@@ -52,88 +53,102 @@
             opacity: 0;
             transition: all 1s ease-in-out;
         }
-    
     </style>
 
     <script data-goatcounter="https://wazzzup.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 
 </head>
+
 <body>
-    
-    <p>my website on <span id="pablo" onclick="pabloOk()">pablo</span> .<span id="energy" onclick="energyOk()">energy</span> !</p>
-    
+
+    <p>my website on <span id="pablo" onclick="pabloOk()">pablo</span> .<span id="energy"
+            onclick="energyOk()">energy</span> !</p>
+
     <audio id="button" src="button.mp3" preload="auto"></audio>
     <audio id="out" src="out.mp3" preload="auto"></audio>
     <audio id="magic" src="magic.mp3" preload="auto"></audio>
 
 
     <script>
-    $pablo = document.querySelector("#pablo");
-    $energy = document.querySelector("#energy");
-    $p = document.querySelector("p");
 
-    function goToEnergy() {
-        if ($pablo.classList.contains("on") && $energy.classList.contains("on")){
-            $p.classList.add("gone");
-            document.body.style.backgroundColor = ("greenyellow");
-            playMagic();
-            setTimeout(() => {
-                window.location.href = "https://pablo.energy";
-            }, "1000")
+        function mobileWindow() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            console.log("VH on mobiles", vh);
         }
 
-        else{}
-    }
+        window.addEventListener("resize", mobileWindow, false);
+        window.addEventListener("orientationchange", mobileWindow, false);
 
-    function energyOk() {
-        if (!$energy.classList.contains("on")){
-            $energy.classList.add("on");
-            playButton();
-            goToEnergy();
+
+
+        $pablo = document.querySelector("#pablo");
+        $energy = document.querySelector("#energy");
+        $p = document.querySelector("p");
+
+        function goToEnergy() {
+            if ($pablo.classList.contains("on") && $energy.classList.contains("on")) {
+                $p.classList.add("gone");
+                document.body.style.backgroundColor = ("greenyellow");
+                playMagic();
+                setTimeout(() => {
+                    window.location.href = "https://pablo.energy";
+                }, "1000")
+            }
+
+            else { }
         }
 
-        else if ($energy.classList.contains("on")){
-            $energy.classList.remove("on");
-            playOut();
-        }
-        
-        else{  
-            
-        }
-    }
+        function energyOk() {
+            if (!$energy.classList.contains("on")) {
+                $energy.classList.add("on");
+                playButton();
+                goToEnergy();
+            }
 
-    function pabloOk() {
-        if (!$pablo.classList.contains("on")){
-            $pablo.classList.add("on");
-            playButton();
-            goToEnergy();
-        }
+            else if ($energy.classList.contains("on")) {
+                $energy.classList.remove("on");
+                playOut();
+            }
 
-        else if ($pablo.classList.contains("on")){
-            $pablo.classList.remove("on");
-            playOut();
+            else {
+
+            }
         }
 
-        else{}
-    }
+        function pabloOk() {
+            if (!$pablo.classList.contains("on")) {
+                $pablo.classList.add("on");
+                playButton();
+                goToEnergy();
+            }
+
+            else if ($pablo.classList.contains("on")) {
+                $pablo.classList.remove("on");
+                playOut();
+            }
+
+            else { }
+        }
 
 
-    function playButton() {
-        button.play();
-    };
+        function playButton() {
+            button.play();
+        };
 
-    function playOut() {
-        out.play();
-    };
+        function playOut() {
+            out.play();
+        };
 
-    function playMagic() {
-        magic.play();
-    };
+        function playMagic() {
+            magic.play();
+        };
 
     // $pablo.addEventListener('click', playButton, false);
     // $energy.addEventListener('click', playButton, false);
 
     </script>
 </body>
+
 </html>
